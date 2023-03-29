@@ -1,4 +1,5 @@
-import "./App.css";
+import AdminRoutes from "./Admin/AdminRoutes/Routes";
+import "./App.css"
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       ></i>
       <h1>India Mart</h1>
       <p>DigiMART - An Online Market Place For All Your Need</p>
+    <AdminRoutes/>
     </div>
   );
 }
