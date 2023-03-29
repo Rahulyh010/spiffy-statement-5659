@@ -10,7 +10,6 @@ function App() {
       ></i>
       <h1>India Mart</h1>
       <p>DigiMART - An Online Market Place For All Your Need</p>
-    <AdminRoutes/>
     </div>
   );
 }
