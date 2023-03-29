@@ -1,4 +1,3 @@
-import AdminRoutes from "./Admin/AdminRoutes/Routes";
 import "./App.css"
 
 function App() {
