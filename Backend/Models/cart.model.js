@@ -2,13 +2,15 @@ const { default: mongoose } = require("mongoose");
 
 
 const cartSchema=mongoose.Schema({
-
-    image:String,
+    title:String,
+    price:String,
+    reviews:Object,
+    image_url:String,
+    discount:Number,
+    discription:String,
+    rating:String,
     price:Number,
-    description:String,
-    name:String,
-    category:String,
-    userId:String
+    
 
 }
 )

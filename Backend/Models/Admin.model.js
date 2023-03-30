@@ -4,10 +4,12 @@ const mongoose=require("mongoose")
 
 
 const adminSchema= mongoose.Schema({
-    name:String,
-    category:String,
-    gender:String,
+    title:String,
+    price:String,
+    reviews:Object,
     image_url:String,
+    discount:Number,
+    discription:String,
     rating:String,
     price:Number,
     adminId:String

@@ -23,6 +23,14 @@ adminRoute.post("/addProduct",adminAuth, async(req,res)=>{
 
 })
 
+
+adminRoute.post("/addProducts",adminAuth, async(req,res)=>{
+    const payload=req.body;
+
+    const data= await AdminModel.insertMany(payload)
+    res.send({"msg":"Successfully Added Sir"})
+})
+
 adminRoute.patch("/editproduct/:id",adminAuth, async(req,res)=>{
     const {id}=req.params;
     const payload=req.body
