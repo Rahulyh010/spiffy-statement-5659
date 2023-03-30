@@ -6,7 +6,21 @@ const Productcard = (data) => {
   return (
     <div className={styles.container}>
         <div>
-            <img src={data.image}/>
+          <div className={styles.image}>
+              <img src={data.image}/>
+          </div>
+          <div className={styles.title}>
+            <h2>{data.title}</h2>
+          </div>
+          <div className={styles.price}>
+            <p>₹ {data.price}</p>
+          </div>
+        </div>
+        <div>
+          <hr/>
+          <div className={styles.button}>
+            <button>Update</button>
+          </div>
         </div>
     </div>
   )

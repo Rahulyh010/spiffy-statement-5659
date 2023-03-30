@@ -1,3 +1,32 @@
 .container{
     border: 1px solid black;
+    width:fit-content;
+}
+.container>div:nth-child(1){
+    padding: 12px;
+}
+.image img{
+    height:280px;
+    width:240px;
+    margin:0px
+}
+.title h2{
+    max-width: 230px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    flex-shrink: 1;
+    margin:0px
+}
+.price p{
+    color:blue;
+    font-size: x-large;
+    margin:0px
+}
+.button button{
+    padding: 6px 12px;
+    color-scheme: green;
+}
+.container hr{
+    color: black;
 }
