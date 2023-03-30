@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom';
 import Productcard from '../Component/Productcard';
 import "../Css/Productlist.css"
 
@@ -11,14 +12,25 @@ const Productlist = () => {
     .then((res)=>setProductData(res))
     .catch((err)=>console.log(err))
   }
+
+  const deleteData = async(id) => {
+    await fetch(`https://alok-verma-rct.onrender.com/beautyface/${id}`,{
+      method:"DELETE",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+    fetchData();
+  }
+
   useEffect(()=>{
     fetchData();
   },[])
   return (
-    <div style={{marginTop:"15px"}}>
+    <div className='parent' style={{marginTop:"15px"}}>
       <div className='options'>
         <div>
-          <button className='add-product'>ADD PRODUCT</button>
+          <Link to="/adminAddProduct"><button className='add-product'>ADD PRODUCT</button></Link>
         </div>
         <div>
           <select className='category'  placeholder='H'>
@@ -27,11 +39,13 @@ const Productlist = () => {
           </select>
         </div>
       </div>
-      <div>
+      <br/>
+      <br/>
+      <div className="products">
         {
           productData?.map((e)=>{
             return(
-              <Productcard key={e.id} {...e}/>
+              <Productcard key={e.id} {...e} deleteData={deleteData}/>
             )
           })
         }

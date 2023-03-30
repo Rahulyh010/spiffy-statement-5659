@@ -2,7 +2,6 @@ import React from 'react'
 import styles from "../Css/Productcard.module.css"
 
 const Productcard = (data) => {
-    console.log(data)
   return (
     <div className={styles.container}>
         <div>
@@ -10,16 +9,19 @@ const Productcard = (data) => {
               <img src={data.image}/>
           </div>
           <div className={styles.title}>
-            <h2>{data.title}</h2>
+            <h3>{data.title}</h3>
           </div>
           <div className={styles.price}>
             <p>₹ {data.price}</p>
           </div>
         </div>
+        <hr/>
         <div>
-          <hr/>
-          <div className={styles.button}>
+          <div className={styles.update}>
             <button>Update</button>
+          </div>
+          <div className={styles.delete}>
+            <button onClick={()=>data.deleteData(data.id)}>Delete</button>
           </div>
         </div>
     </div>
