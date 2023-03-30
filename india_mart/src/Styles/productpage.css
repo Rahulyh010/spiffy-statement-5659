@@ -10,5 +10,38 @@
     grid-template-columns: repeat(4,1fr);
     grid-template-rows: auto;
     gap:20px;
-    border: 1px solid black;
+    border: 0px solid black;
+}
+
+
+@media only screen and (max-width:990px)  and (min-width:860px){
+    .prod-page{
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: auto;
+    }
+}
+@media only screen and (max-width:860px)  and (min-width:600px){
+    .prod-page{
+        width: 100%;
+        margin-left: 0px;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: auto;
+    }
+}
+@media only screen and (max-width:600px)  and (min-width:490px){
+    .prod-page{
+        width: 100%;
+        margin-left: 0px;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: auto;
+    }
+}
+
+@media only screen and (max-width:490px)  and (min-width:0px){
+    .prod-page{
+        width: 100%;
+        margin-left: 0px;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: auto;
+    }
 }

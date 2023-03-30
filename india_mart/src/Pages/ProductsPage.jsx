@@ -1,5 +1,6 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import Navbar from '../components/navbar'
 import { ProductCard } from '../components/productCard'
 import { SideBarProd } from '../components/SideBarProd'
 import "../Styles/productpage.css"
@@ -29,6 +30,7 @@ export const ProductsPage = () => {
 
   return (
     <div className='main-prod-page'>
+        <Navbar/>
 <SideBarProd/>
 
 <div className="prod-page">

@@ -5,7 +5,7 @@ export const SideBarProd = () => {
   return (
     <div className='main-sidebar-prod' >
         <div className='sidebar-prod'>
-            <h2>Categories</h2>
+            <h2 className="sidebar-h2" >Categories</h2>
           <p>Gourmet & World Food</p>
           <p>Pasta,Soup & Noodles</p>
           <p>Snacks % Branded Foods</p>
@@ -14,8 +14,8 @@ export const SideBarProd = () => {
           <p>Snacks & Namkeen</p>
         </div>
 <div id="brand" >
-    <h3>Brand</h3>
-    <input type="text" className='input-sideprod'/><br />
+    <h3 className="sidebar-h2">Brand</h3>
+    <input type="text" className='input-sideprod' placeholder='Brand' /><br />
     <input type="checkbox" /> Aashirvaad <br />
     <input type="checkbox" /> Bambino <br />
     <input type="checkbox" /> Blue Bird <br />
@@ -30,8 +30,8 @@ export const SideBarProd = () => {
 </div>
 
 <div>
-    <h3>Price</h3>
-    <input type="text" className='input-sideprod'/><br />
+    <h3 className="sidebar-h2">Price</h3>
+    <input type="text" className='input-sideprod' placeholder='Price' /><br />
     <input type="checkbox" /> Less Than 50rs <br />
     <input type="checkbox" /> Rs 50 to Rs 100 <br />
     <input type="checkbox" /> Rs 150 to Rs 200  <br />
@@ -41,8 +41,8 @@ export const SideBarProd = () => {
  
 </div>
         <div>
-            <h3>Discount</h3>
- <input type="text" className='input-sideprod'/><br />
+            <h3 className="sidebar-h2">Discount</h3>
+ <input type="text" className='input-sideprod' placeholder='Discount'/><br />
  <input type="checkbox" /> Up to 5% <br />
     <input type="checkbox" /> Up to 15% <br />
     <input type="checkbox" /> Up to 25%  <br />

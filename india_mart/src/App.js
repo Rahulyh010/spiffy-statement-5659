@@ -11,7 +11,7 @@ function App() {
       <Allroutes />
       <Navabr />
       
-      <ProductsPage/>
+     
     </div>
   );
 }
