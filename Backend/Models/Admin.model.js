@@ -9,7 +9,8 @@ const adminSchema= mongoose.Schema({
     gender:String,
     image_url:String,
     rating:String,
-    price:Number
+    price:Number,
+    adminId:String
 
 
 })

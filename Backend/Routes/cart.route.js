@@ -37,6 +37,39 @@ cartRoute.post("/add",Auth,async(req,res)=>{
 
 })
 
+cartRoute.patch("/update/:id",Auth, async(req,res)=>{
+
+
+ const {id}=req.params
+
+ if(id){
+    const data= await CartModel.findByIdAndUpdate({_id:id},req.body)
+    res.status(200).send({"msg":"Successfull"})
+ }else{
+    res.status(400).send({"msg":"Pass Id Please"})
+ }
+
+    
+
+
+})
+
+cartRoute.delete("/delete/:id",Auth,async(req,res)=>{
+
+    const {id}=req.params;
+
+    if(id){
+
+    }else{
+        
+    }
+
+    const data= await CartModel.find({_id:id})
+
+    res.status(200).send({"msg":"Successfully deleted"})
+})
+
+
 
 
 module.exports={
