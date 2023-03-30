@@ -10,4 +10,4 @@
 
 ### Project Logo :-
 
-![Alt text](india_mart/src/Assets/DigiMART%20logo.png)
+![Alt text](india_mart/src/Assets/DigiMARTlogo.png)

@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333;
+}
+
+.navbar {
+  width: 100%;
+  height: 5rem;
+  background: #00a699;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+}
+
+.navbar > .icons {
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+}
+
+#ham-icon {
+  display: none;
+}
+
+.min-screen {
+  font-size: 20px;
+  color: white;
+  display: none;
+}
+
+.min-screen > .icons {
+  color: white;
+}
+
+.midpart {
+  /* border: 1px solid red; */
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 3px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.midpart input {
+  width: 87%;
+  padding: 6px 10px;
+  border: none;
+  outline: none;
+}
+
+.midpart input::-webkit-input-placeholder {
+  color: #00a699;
+}
+
+.nav-items {
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  /* background: ; */
+}
+
+.nav-items > li {
+  list-style: none;
+  cursor: pointer;
+}
+
+.ham-menu {
+  width: 45%;
+  height: 100vh;
+  border-right: 1px solid #00a699;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  background: white;
+  overflow: auto;
+}
+
+#top-part {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  font-size: 18px;
+  background: #00a699;
+  color: white;
+}
+
+#top-part p {
+  color: white;
+}
+
+#part-2-top,
+#part-3-mid {
+  border-bottom: 1.5px solid rgba(13, 11, 11, 0.067);
+  display: flex;
+  text-align: left;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem 1rem 0 1rem;
+}
+
+.ham-items {
+  list-style: none;
+  display: flex;
+  text-align: left;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+}
+
+.ham-items > li {
+  cursor: pointer;
+}
+
+.fa-xmark {
+  cursor: pointer;
+  border: 1px solid white;
+  border-radius: 55%;
+  padding: 0.5rem;
+  color: white;
+}
+
+@media only screen and (max-width: 710px) {
+  .navbar > .icons {
+    display: none;
+  }
+
+  #ham-icon {
+    display: block;
+  }
+  .midpart {
+    display: none;
+  }
+
+  .min-screen {
+    display: block;
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .nav-items {
+    display: none;
+  }
+
+  #logo {
+    width: 150px;
+  }
+}
+
+@media only screen and (max-width: 407px) {
+  .ham-menu {
+    width: 70%;
+  }
+}
