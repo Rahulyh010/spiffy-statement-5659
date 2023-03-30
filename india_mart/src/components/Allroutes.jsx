@@ -1,5 +1,12 @@
+import { Route, Routes } from "react-router-dom";
+import { ProductCard } from "./productCard";
+
 const Allroutes = () => {
-  return <div></div>;
+  return <div>
+  <Routes>
+    <Route path="/productscard" element={<ProductCard/>}/>
+  </Routes>
+  </div>;
 };
 
 export default Allroutes;

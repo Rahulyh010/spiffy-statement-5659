@@ -6,9 +6,11 @@ const { AdminModel } = require("../Models/Admin.model")
 const adminRoute=express.Router()
 
 
-adminRoute.get("/",adminAuth, (req,res)=>{
+adminRoute.get("/",adminAuth, async(req,res)=>{
 
-    res.status(200).send({"msg":"Successfull"})
+    const data= await AdminModel.find()
+
+    res.status(200).send(data)
 })
 
 adminRoute.post("/addProduct",adminAuth, async(req,res)=>{
