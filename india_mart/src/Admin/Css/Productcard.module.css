@@ -1,16 +1,25 @@
 .container{
-    border: 1px solid black;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     width:fit-content;
+    border-radius: 5px;
 }
 .container>div:nth-child(1){
-    padding: 12px;
+    padding: 15px;
+}
+.container>div:nth-child(3){
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
 }
 .image img{
     height:280px;
     width:240px;
     margin:0px
 }
-.title h2{
+.title{
+    margin-top: 10px;
+}
+.title h3{
     max-width: 230px;
     overflow: hidden;
     white-space: nowrap;
@@ -18,15 +27,184 @@
     flex-shrink: 1;
     margin:0px
 }
+.price{
+    margin-top: 10px;
+}
 .price p{
     color:blue;
     font-size: x-large;
     margin:0px
 }
-.button button{
+.update button,.delete button{
     padding: 6px 12px;
-    color-scheme: green;
+    font-weight: bolder;
+    font-size: 18px;
+    background: rgb(6, 160, 88);
+    color:white;
+    border-radius: 2px;
+}
+.update button:hover,.delete button:hover{
+    cursor: pointer;
+}
+.delete button{
+    background-color: red;
 }
 .container hr{
     color: black;
+}
+
+@media (min-width: 900px) and (max-width: 1000px) {
+    .image img{
+        height:250px;
+        width:210px;
+    }
+    .title h3{
+        max-width: 200px;
+    }
+}
+
+@media (min-width: 800px) and (max-width: 900px) {
+    .container>div:nth-child(1){
+        padding: 12px;
+    }
+    .container>div:nth-child(3){
+        padding: 12px;
+    }
+    .image img{
+        height:220px;
+        width:190px;
+    }
+    .title h3{
+        max-width: 170px;
+    }
+    .title{
+        margin-top: 7px;
+    }
+    .price{
+        margin-top: 7px;
+    }
+}
+
+@media (min-width: 665px) and (max-width: 800px) {
+    .container>div:nth-child(1){
+        padding: 14px;
+    }
+    .container>div:nth-child(3){
+        padding: 14px;
+    }
+    .image img{
+        height:240px;
+        width:200px;
+    }
+}
+
+@media (min-width: 550px) and (max-width: 665px) {
+    .container>div:nth-child(1){
+        padding: 12px;
+    }
+    .container>div:nth-child(3){
+        padding: 12px;
+    }
+    .image img{
+        height:205px;
+        width:175px;
+    }
+    .title h3{
+        max-width: 170px;
+    }
+    .title{
+        margin-top: 8px;
+    }
+    .price{
+        margin-top: 8px;
+    }
+    .price p{
+        font-size: 18px;
+    }
+    .update button,.delete button{
+        padding: 3px 8px;
+    }
+}
+@media (min-width: 350px) and (max-width: 425px) {
+    .container>div:nth-child(1){
+        padding: 12px;
+    }
+    .container>div:nth-child(3){
+        padding: 12px;
+    }
+    .image img{
+        height:210px;
+        width:185px;
+    }
+    .title h3{
+        max-width: 170px;
+    }
+    .title{
+        margin-top: 8px;
+    }
+    .price{
+        margin-top: 8px;
+    }
+    .price p{
+        font-size: 18px;
+    }
+    .update button,.delete button{
+        padding: 3px 8px;
+    }
+}
+@media (min-width: 300px) and (max-width: 350px) {
+    .container>div:nth-child(1){
+        padding: 12px;
+    }
+    .container>div:nth-child(3){
+        padding: 12px;
+    }
+    .image img{
+        height:200px;
+        width:170px;
+    }
+    .title h3{
+        max-width: 165px;
+    }
+    .title{
+        margin-top: 8px;
+    }
+    .price{
+        margin-top: 8px;
+    }
+    .price p{
+        font-size: 18px;
+    }
+    .update button,.delete button{
+        padding: 3px 8px;
+    }
+}
+@media (min-width: 250px) and (max-width: 300px) {
+    .container>div:nth-child(1){
+        padding: 10px;
+    }
+    .container>div:nth-child(3){
+        padding: 10px;
+    }
+    .image img{
+        height:180px;
+        width:130px;
+    }
+    .title h3{
+        max-width: 125px;
+        font-size: 14px;
+    }
+    .title{
+        margin-top: 6px;
+    }
+    .price{
+        margin-top: 6px;
+    }
+    .price p{
+        font-size: 14px;
+    }
+    .update button,.delete button{
+        padding: 2px 5px;
+        font-size: 13px;
+    }
 }

@@ -1,5 +1,7 @@
+.parent{
+    padding:"0px 50px"
+}
 .options{
-    margin-left: 15px;
     display: flex;
     gap:20px
 }
@@ -28,4 +30,79 @@
 .category option{
     background: white;
     color: black;
+}
+.products{
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    row-gap: 30px;
+}
+
+@media (min-width: 1100px) and (max-width: 1300px) {
+    .products{
+        grid-template-columns: repeat(3,1fr);
+        row-gap: 30px;
+    }
+}
+@media (min-width: 800px) and (max-width: 1100px) {
+    .products{
+        grid-template-columns: repeat(3,1fr);
+        row-gap: 30px;
+    }
+}
+@media (min-width: 550px) and (max-width: 800px) {
+    .products{
+        grid-template-columns: repeat(2,1fr);
+        row-gap: 30px;
+    }
+}
+@media (min-width:350px) and (max-width: 550px) {
+    .products{
+        width: fit-content;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    .options{
+        flex-direction: column-reverse;
+        width: fit-content;
+        margin: auto;
+    }
+}
+@media  (max-width: 350px){
+    .products{
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+    }
+    .options{
+        flex-direction: column-reverse;
+        width: fit-content;
+    }
+    .add-product{
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+    .category{
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
+@media (min-width: 250px) and (max-width: 300px){
+    .products{
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+    }
+    .options{
+        flex-direction: column-reverse;
+        width: fit-content;
+    }
+    .add-product{
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+    .category{
+        padding: 6px 7px;
+        font-size: 12px;
+    }
 }
