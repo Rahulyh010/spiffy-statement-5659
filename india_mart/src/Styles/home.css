@@ -12,7 +12,7 @@
 }
 
 #home-top > h1,
-p {
+#home-top>p {
   margin-bottom: 5px;
   color: white;
 }

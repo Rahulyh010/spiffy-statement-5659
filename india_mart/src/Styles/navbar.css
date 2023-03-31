@@ -16,6 +16,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 2rem;
+  margin-bottom: 70px;
 }
 
 .navbar > .icons {
@@ -72,6 +73,8 @@
   left: 0;
   width: 100%;
   z-index: 99;
+  margin-top: -70px;
+  
 }
 
 .nav-items > li,
@@ -91,6 +94,8 @@
   z-index: 999;
   background: white;
   overflow: auto;
+  
+  
 }
 
 #top-part {
