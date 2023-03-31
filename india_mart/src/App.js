@@ -5,7 +5,7 @@ import Allroutes from "./components/Allroutes";
 function App() {
   return (
     <div className="App">
-      {/* <Navabr /> */}
+      <Navabr />
       <Allroutes />
     </div>
   );
