@@ -1,5 +1,6 @@
 .parent{
-    padding:"0px 50px"
+    padding:"0px 50px";
+    margin-left: 100px;
 }
 .options{
     display: flex;
@@ -106,3 +107,39 @@
         font-size: 12px;
     }
 }
+
+@media (min-width:665px) and (max-width:800px){
+    .parent{
+      margin-left: 107px;
+    }
+  }
+
+  @media (min-width:550px) and (max-width:665px){
+    .parent{
+      margin-left: 110px;
+    }
+  }
+
+  @media (min-width:400px) and (max-width:550px){
+    .parent{
+      margin-left: 55px;
+    }
+  }
+
+  @media (min-width:350px) and (max-width:400px){
+    .parent{
+      margin-left: 55px;
+    }
+  }
+
+  @media (min-width:300px) and (max-width:350px){
+    .parent{
+      margin-left: 60px;
+    }
+  }  
+
+  @media(max-width:350px){
+    .parent{
+      margin-left: 77px;
+    }
+  }
