@@ -2,13 +2,19 @@ import "../Styles/navbar.css";
 import logo from "../Assets/DigiMARTlogo1.png";
 import { useState } from "react";
 import { useRef } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [display, setDisplay] = useState("none");
   const hamRef = useRef(null);
+  const navigate = useNavigate();
 
   const toggleHam = () => {
     display === "none" ? setDisplay("block") : setDisplay("none");
+  };
+
+  const redirectToHome = () => {
+    navigate("/");
   };
 
   return (
@@ -16,7 +22,13 @@ const Navbar = () => {
       {/* first part */}
       <div className="navbar">
         <i id="ham-icon" className="icons fa fa-bars" onClick={toggleHam}></i>
-        <img id="logo" src={logo} alt="web-logo" width="170" />
+        <img
+          id="logo"
+          src={logo}
+          alt="web-logo"
+          width="170"
+          onClick={redirectToHome}
+        />
         <div className="midpart">
           <i className="icons fa fa-search"></i>
           <input type="text" placeholder="Search for A Product/Service" />
@@ -25,17 +37,20 @@ const Navbar = () => {
         <i className="icons fas fa-tag"></i>
         <i className="icons fa fa-store"></i>
         <i className="icons fa fa-circle-question"></i>
-        <i class="icons fas fa-cart-shopping"></i>
+        <i className="icons fas fa-cart-shopping"></i>
         <i className="icons fa-solid fa-user"></i>
         <span className="min-screen">
           <i className="icons fa fa-search"></i>
-          <i class="icons fas fa-cart-shopping"></i>
+          <i className="icons fas fa-cart-shopping"></i>
           <i className="icons fa-solid fa-user"></i>
         </span>
       </div>
       {/* Second Part */}
       <div className="nav-items">
-        <li className="nav-item-links">Food & Beverages</li>
+        <Link to="/" />
+        <Link to="food" className="nav-item-links">
+          Food & Beverages
+        </Link>
         <li className="nav-item-links">Apparel & Garments</li>
         <li className="nav-item-links">Hospital & Diagnostics</li>
         <li className="nav-item-links">Industrial Plants & Machinery</li>
@@ -70,21 +85,21 @@ const Navbar = () => {
         </p>
         <div className="ham-items">
           <li className="nav-item-links">
-            <i class="fa fa-language"></i> Change Language / भाषा चुनें
+            <i className="fa fa-language"></i> Change Language / भाषा चुनें
           </li>
           <li className="nav-item-links">&#9432; About IndiaMART</li>
           <li className="nav-item-links" style={{ fontWeight: "500" }}>
-            <i class="fa-solid fa-arrow-trend-up"></i> Enjoy 10X faster
+            <i className="fa-solid fa-arrow-trend-up"></i> Enjoy 10X faster
             experience
           </li>
           <li className="nav-item-links" style={{ fontWeight: "500" }}>
-            <i class="fa fa-mobile"></i> Get the Lighter App
+            <i className="fa fa-mobile"></i> Get the Lighter App
           </li>
           <li className="nav-item-links">
-            <i class="fa fa-phone"></i> Help & Support
+            <i className="fa fa-phone"></i> Help & Support
           </li>
           <li className="nav-item-links" style={{ fontWeight: "500" }}>
-            <i class="fa fa-box"></i> More Apps
+            <i className="fa fa-box"></i> More Apps
           </li>
         </div>
       </div>

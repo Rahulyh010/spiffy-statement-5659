@@ -1,5 +1,4 @@
 import "./App.css";
-import Navabr from "./components/navbar";
 import Allroutes from "./components/Allroutes";
 import { SideBarProd } from "./components/SideBarProd";
 import { ProductCard } from "./components/productCard";
@@ -9,9 +8,6 @@ function App() {
   return (
     <div className="App">
       <Allroutes />
-      <Navabr />
-      
-     
     </div>
   );
 }
