@@ -4,9 +4,9 @@ const TrendClass = ({ data }) => {
   return (
     <div id="trending">
       {data &&
-        data.map((el) => {
+        data.map((el, i) => {
           return (
-            <div className="trend-class">
+            <div key={i + 1} className="trend-class">
               <img src={el.image} alt={el.name} />
               <p>{el.name}</p>
               <button>{el.text}</button>
