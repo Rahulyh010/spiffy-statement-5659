@@ -76,7 +76,7 @@ const CheckoutDetails = () => {
             if (!toast.isActive(id)) {
               toast({
                 id,
-                title: "Fill details",
+                title: "Fill the details",
                 description: "Fill above shipping details to proceed",
                 status: "error",
                 duration: 3000,

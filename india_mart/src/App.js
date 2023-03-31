@@ -1,5 +1,8 @@
 import "./App.css";
 import Allroutes from "./components/Allroutes";
+import { SideBarProd } from "./components/SideBarProd";
+import { ProductCard } from "./components/productCard";
+import { ProductsPage } from "./Pages/ProductsPage";
 
 function App() {
   return (

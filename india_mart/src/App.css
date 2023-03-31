@@ -2,26 +2,9 @@
   text-align: center;
 }
 
-.App > .main-nav-div {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 10;
-}
-
-.App > .page {
-  margin-top: 10rem;
-}
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;
-}
-
-@media only screen and (max-width: 710px) {
-  .App > .page {
-    margin-top: 5.5rem;
-  }
 }
 
 @media (prefers-reduced-motion: no-preference) {
