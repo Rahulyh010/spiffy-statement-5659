@@ -4,6 +4,9 @@ import TrendClass from "../components/trendclass";
 import "../Styles/home.css";
 import data from "../swiperdata.json";
 import Navbar from "../components/navbar";
+import Premiumbrands from "../components/Premiumbrands";
+import { Image } from "@chakra-ui/react";
+import Footer from "../components/footer";
 
 const Home = () => {
   return (
@@ -67,8 +70,27 @@ const Home = () => {
         <div className="all-mixed-cst">
           <p className="amzcat-name">Trending Categories</p>
           <TrendClass data={data.trendingCategories} />
+
+          <div>
+            <p className="premium-brands">Premium Brands</p>
+            <Premiumbrands data={data.premiumBrands} />
+          </div>
+
+          <Image
+            className="yearhund"
+            src="https://m.imimg.com/gifs/img/Founder_360X100.jpg"
+            mb={5}
+          />
         </div>
+
+        <button className="app-open">
+          <i className="fa-solid fa-lock-open" style={{ color: "white" }}></i>{" "}
+          Open in App
+        </button>
       </div>
+
+      {/* footer  */}
+      <Footer />
     </div>
   );
 };

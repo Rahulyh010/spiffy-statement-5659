@@ -3,6 +3,7 @@ import logo from "../Assets/DigiMARTlogo1.png";
 import { useState } from "react";
 import { useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { Box } from "@chakra-ui/react";
 
 const Navbar = () => {
   const [display, setDisplay] = useState("none");
@@ -18,7 +19,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="main-nav-div">
+    <Box className="main-nav-div">
       {/* first part */}
       <div className="navbar">
         <i id="ham-icon" className="icons fa fa-bars" onClick={toggleHam}></i>
@@ -103,7 +104,7 @@ const Navbar = () => {
           </li>
         </div>
       </div>
-    </div>
+    </Box>
   );
 };
 
