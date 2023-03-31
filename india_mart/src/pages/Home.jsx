@@ -5,7 +5,7 @@ import "../Styles/home.css";
 import data from "../swiperdata.json";
 import Navbar from "../components/navbar";
 import Premiumbrands from "../components/Premiumbrands";
-import { Image } from "@chakra-ui/react";
+import { Center, Image } from "@chakra-ui/react";
 import Footer from "../components/footer";
 
 const Home = () => {
@@ -76,17 +76,21 @@ const Home = () => {
             <Premiumbrands data={data.premiumBrands} />
           </div>
 
-          <Image
-            className="yearhund"
-            src="https://m.imimg.com/gifs/img/Founder_360X100.jpg"
-            mb={5}
-          />
+          <Center>
+            <Image
+              className="yearhund"
+              src="https://m.imimg.com/gifs/img/Founder_360X100.jpg"
+              mb={5}
+            />
+          </Center>
         </div>
 
-        <button className="app-open">
-          <i className="fa-solid fa-lock-open" style={{ color: "white" }}></i>{" "}
-          Open in App
-        </button>
+        <Center>
+          <button className="app-open">
+            <i className="fa-solid fa-lock-open" style={{ color: "white" }}></i>{" "}
+            Open in App
+          </button>
+        </Center>
       </div>
 
       {/* footer  */}

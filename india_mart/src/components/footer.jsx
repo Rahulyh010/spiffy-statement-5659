@@ -1,4 +1,5 @@
 import React from "react";
+import { Center } from "@chakra-ui/react";
 
 const footerStyle = {
   p: {
@@ -16,7 +17,9 @@ const footerStyle = {
 const Footer = () => {
   return (
     <div className="footer">
-      <p style={footerStyle.p}>About Us | Customer Care | Desktop Site</p>
+      <Center>
+        <p style={footerStyle.p}>About Us | Customer Care | Desktop Site</p>
+      </Center>
       <div style={footerStyle.div}>
         <i
           style={{

@@ -1,4 +1,5 @@
 import React from "react";
+import { Center } from "@chakra-ui/react";
 
 const TrendClass = ({ data }) => {
   return (
@@ -6,11 +7,13 @@ const TrendClass = ({ data }) => {
       {data &&
         data.map((el, i) => {
           return (
-            <div key={i + 1} className="trend-class">
-              <img src={el.image} alt={el.name} />
-              <p>{el.name}</p>
-              <button>{el.text}</button>
-            </div>
+            <Center>
+              <div key={i + 1} className="trend-class">
+                <img src={el.image} alt={el.name} />
+                <p>{el.name}</p>
+                <button>{el.text}</button>
+              </div>
+            </Center>
           );
         })}
     </div>
