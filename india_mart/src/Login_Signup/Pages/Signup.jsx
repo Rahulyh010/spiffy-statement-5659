@@ -1,50 +1,95 @@
-import React, { useRef } from "react";
+import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import styles from "../styles/Signup.module.css"
+import styles from "../styles/Signup.module.css";
 
 const Signup = () => {
-  const name = useRef();
-  const email = useRef();
-  const password = useRef();
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [city, setCity] = useState("");
 
   const navigate = useNavigate();
 
-  const localSignup = localStorage.getItem("signup");
-
-  const handleClick = () => {
-    if (name.current.value && email.current.value && password.current.value) {
-      localStorage.setItem("name", name.current.value);
-      localStorage.setItem("email", email.current.value);
-      localStorage.setItem("password", password.current.value);
-      alert("Account Created");
-
-      navigate("/login");
-    } else {
-      alert("Fill all the details");
-    }
+  const handleSubmit = () => {
+    const payload = {
+      name: name,
+      email: email,
+      password: password,
+      city: city,
+    };
+    // console.log(payload);
+    fetch(`http://localhost:8080/users/register`, {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json",
+      },
+      body: JSON.stringify(payload),
+    })
+      .then((res) => res.json())
+      .then((res) => console.log(res))
+      .then((res)=>alert("User Registered Successfully"))
+      .then((res)=>navigate("/login"))
+      
+      .catch((err) => console.log(err));
   };
-  return (
-    <div className={styles.signup_box}>
 
-    <div className={styles.signup_main_container}>
-      <h1 className={styles.reg}>Register</h1>
-      <div className={styles.signup_container}>
-        <div className={styles.input_space}>
-          <input type="text" placeholder="Enter Your Name" ref={name} />
-        </div>
-        <div className={styles.input_space}>
-          <input type="email" placeholder="Enter Your Email" ref={email} />
-        </div>
-        <div className={styles.input_space}>
-          <input type="password" placeholder="Enter password" ref={password} />
-        </div>
-        <button className={styles.praButton} onClick={handleClick}>Sign Up</button>
-      </div>
-      <div className={styles.login_link}>
+  return (
+    <>
+      <div className={styles.signup_box}>
+        <div className={styles.signup_main_container}>
+          <h1 className={styles.reg}>Register</h1>
+          <div className={styles.signup_container}>
+            <div className={styles.input_space}>
+              <input
+                type="text"
+                name=""
+                id=""
+                placeholder="Enter name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+              />
+            </div>
+            <div className={styles.input_space}>
+              <input
+                type="text"
+                name=""
+                id=""
+                placeholder="Enter email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+            </div>
+            <div className={styles.input_space}>
+              <input
+                type="password"
+                name=""
+                id=""
+                placeholder="Enter Password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+            </div>
+            <div className={styles.input_space}>
+              <input
+                type="text"
+                name=""
+                id=""
+                placeholder="Enter City"
+                value={city}
+                onChange={(e) => setCity(e.target.value)}
+              />
+            </div>
+
+            <button className={styles.praButton} onClick={handleSubmit}>
+              Sign Up
+            </button>
+          </div>
+          <div className={styles.login_link}>
             Already a member? <Link to="/login">Login</Link>
+          </div>
         </div>
-    </div>
-    </div>
+      </div>
+    </>
   );
 };
 
