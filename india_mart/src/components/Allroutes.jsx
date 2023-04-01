@@ -9,10 +9,11 @@ import Home from "../Pages/Home";
 import { ProductsPage } from "../Pages/ProductsPage";
 import { CartPage } from "../Pages/CartPage";
 import Login from "../Login_Signup/Pages/Login";
+import Signup from "../Login_Signup/Pages/Signup";
 
 
 const Allroutes = () => {
-  return <div>
+  return (
   <Routes>
     <Route path="/" element={<Home/>}/>
     <Route path="/food" element={<ProductsPage/>}/>
@@ -22,9 +23,10 @@ const Allroutes = () => {
     <Route path="/adminAddProduct" element={<AddProduct/>}/>
     <Route path="/adminUpdateProduct/:id" element={<Updateproduct/>}/>
     <Route path="/login" element={<Login/>}/>
-    <Route path="/register" element={<Signup/>}/>
+    <Route path="/signup" element={<Signup/>}/>
+    
   </Routes>
-  </div>;
+  )
 };
 
 export default Allroutes;
