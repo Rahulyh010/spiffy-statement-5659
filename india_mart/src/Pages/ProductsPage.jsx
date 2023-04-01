@@ -5,7 +5,7 @@ import { ProductCard } from "../components/productCard";
 import { SideBarProd } from "../components/SideBarProd";
 import "../Styles/productpage.css";
 
-const ProductsPage = () => {
+ export const ProductsPage = () => {
   const [data, setdata] = useState([]);
 
   const getdata = () => {
@@ -41,4 +41,4 @@ const ProductsPage = () => {
     </div>
   );
 };
-export default ProductsPage;
+
