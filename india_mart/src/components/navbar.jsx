@@ -31,9 +31,11 @@ const Navbar = () => {
           onClick={redirectToHome}
         />
         <div className="midpart">
-          <i className="icons fa fa-search"></i>
-          <input type="text" placeholder="Search for A Product/Service" />
-          <i className="icons fa fa-microphone"></i>
+          <Link to="/search">
+            <i className="icons fa fa-search"></i>
+            <input type="text" placeholder="Search for A Product/Service" />
+            <i className="icons fa fa-microphone"></i>
+          </Link>
         </div>
         <i className="icons fas fa-tag"></i>
         <i className="icons fa fa-store"></i>
@@ -41,7 +43,9 @@ const Navbar = () => {
         <i className="icons fas fa-cart-shopping"></i>
         <i className="icons fa-solid fa-user"></i>
         <span className="min-screen">
-          <i className="icons fa fa-search"></i>
+          <Link to="/search">
+            <i className="icons fa fa-search"></i>
+          </Link>
           <i className="icons fas fa-cart-shopping"></i>
           <i className="icons fa-solid fa-user"></i>
         </span>
