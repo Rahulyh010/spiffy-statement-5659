@@ -1,11 +1,12 @@
 import "./App.css";
-import Navabr from "./components/navbar";
 import Allroutes from "./components/Allroutes";
+// import { SideBarProd } from "./components/SideBarProd";
+// import { ProductCard } from "./components/productCard";
+// import { ProductsPage } from "./pages/ProductsPage";
 
 function App() {
   return (
     <div className="App">
-      <Navabr />
       <Allroutes />
     </div>
   );

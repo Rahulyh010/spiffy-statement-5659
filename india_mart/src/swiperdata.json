@@ -1,0 +1,266 @@
+{
+    "foodnbev": [
+        {
+            "type": "Rice",
+            "image": "https://bakeitwithlove.com/wp-content/uploads/2022/09/How-To-Freeze-Reheat-Rice-sq.jpg.webp",
+            "var1": "Basmati Rice",
+            "var2": "Kolam Rice",
+            "var3": "Ponni Rice",
+            "var4": "Sona Masoori Rice"
+        },
+        {
+            "type": "Wheat",
+            "image": "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/812MAscsndL._SL1500_.jpg",
+            "var1": "Wheat Grains",
+            "var2": "Milling Wheat",
+            "var3": "Lokwan Wheat",
+            "var4": ""
+        },
+        {
+            "type": "Pulses",
+            "image": "https://5.imimg.com/data5/RS/HE/AZ/SELLER-24138039/toor-dal-500x500.jpg",
+            "var1": "Toor Dal",
+            "var2": "Chana Dal",
+            "var3": "Urad Dal",
+            "var4": "Moong Dal"
+        },
+        {
+            "type": "Atta",
+            "image": "https://asisnaturals.com/wp-content/uploads/2020/05/WHEET-FLOUR.jpg",
+            "var1": "Wheat Flour",
+            "var2": "Maida Flour",
+            "var3": "Wheat Bran",
+            "var4": "Gram Flour"
+        },
+        {
+            "type": "Fresh Vegetables",
+            "image": "https://thumbs.dreamstime.com/b/healthy-fresh-produce-vegetables-27382614.jpg",
+            "var1": "Potato",
+            "var2": "Onion",
+            "var3": "Tomato",
+            "var4": "Mushroom"
+        },
+        {
+            "type": "Whole Spices",
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_vcXJrqN91sYQoBv_NIiYKxkM7rCTRt7umw&usqp=CAU",
+            "var1": "Green Cardamom",
+            "var2": "Black Pepper",
+            "var3": "Cardamom",
+            "var4": "Turmeric"
+        }
+    ],
+    "apparelngarm": [
+        {
+            "type": "Ladie Kurties",
+            "image": "http://cdn.shopify.com/s/files/1/0507/2755/1134/products/rangdeep-green-printed-calf-length-cotton-kurti-kurti-rangdeep-fashions-529593_grande.jpg?v=1632431087",
+            "var1": "Digner Kurti",
+            "var2": "Cotton Kurti",
+            "var3": "Ladies Woolen Kurti",
+            "var4": ""
+        },
+        {
+            "type": "Mens T-Shirt",
+            "image": "https://cdn.shopify.com/s/files/1/1002/7150/products/New-Mockups---no-hanger---TShirt-Yellow.jpg?v=1639657077",
+            "var1": "Mens Round Neck T Shirt",
+            "var2": "Mens Polo T Shirt",
+            "var3": "Graphin Printed T-Shirt",
+            "var4": ""
+        },
+        {
+            "type": "Blazers",
+            "image": "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/51GMLs7igxL._UL1080_.jpg",
+            "var1": "Mens Blazer",
+            "var2": "Womens Blazer",
+            "var3": "Designer Blazer",
+            "var4": ""
+        },
+        {
+            "type": "Saftey Shoes",
+            "image": "https://cdn.shopify.com/s/files/1/0083/3450/8068/products/galista-apolo-tan-1.jpg?v=1573974179",
+            "var1": "Leather Safety Shoes",
+            "var2": "Steel Toe Safety Shoes",
+            "var3": "Industrial Shoes",
+            "var4": ""
+        },
+        {
+            "type": "Trouser",
+            "image": "https://5.imimg.com/data5/LN/PI/JS/SELLER-3749501/corparate-trouser-500x500.jpg",
+            "var1": "Cargo Pant",
+            "var2": "Jogger Pant",
+            "var3": "Chino Trousers",
+            "var4": ""
+        },
+        {
+            "type": "Commercial Uniforms",
+            "image": "https://5.imimg.com/data5/SELLER/Default/2022/12/UA/JW/IG/625942/commercial-uniforms-500x500-500x500.webp",
+            "var1": "Worker Uniform",
+            "var2": "Housekeeping Uniform",
+            "var3": "Corporate Uniform",
+            "var4": ""
+        }
+    ],
+    "pharmaceutics": [
+        {
+            "type": "Pharmaceutical Drug",
+            "image": "https://img.freepik.com/free-icon/tablet_318-537208.jpg?w=2000",
+            "var1": "Anticoagulants Drugs",
+            "var2": "Antibiotic Tablets",
+            "var3": "Anticeptic Drugs",
+            "var4": "Antifungal Drugs"
+        },
+        {
+            "type": "Fitness Supplements",
+            "image": "http://cdn.shopify.com/s/files/1/0291/3743/6771/products/EssentialWhey.jpg?v=1644907191",
+            "var1": "Weight Gain Nutrition",
+            "var2": "Weight Gain Capsules",
+            "var3": "Pre Workout Supplements",
+            "var4": "Immune Booster"
+        },
+        {
+            "type": "Medical Treatment Services",
+            "image": "https://images.squarespace-cdn.com/content/v1/5aa9aa9d1137a6a3ad2dacd4/1527991728092-IHI0JK3EJY02YJX0HITN/Surgical+Square-min.jpg?format=1000w",
+            "var1": "Dental Treatment ",
+            "var2": "Medical Surgery",
+            "var3": "Eye Treatment",
+            "var4": "Plastic Surgery Services"
+        },
+        {
+            "type": "Medical Test Services",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Modern%C3%AD_v%C3%BDpo%C4%8Detn%C3%AD_tomografie_s_p%C5%99%C3%ADmo_digit%C3%A1ln%C3%AD_detekc%C3%AD_rentgenov%C3%A9ho_z%C3%A1%C5%99en%C3%AD.jpg",
+            "var1": "CT Scan Services",
+            "var2": "Ultrasound Services",
+            "var3": "ECHO Cardiography",
+            "var4": "Blood Testing"
+        },
+        {
+            "type": "Nutraceuticals",
+            "image": "https://cdn01.pharmeasy.in/dam/products_otc/071710/evion-400mg-strip-of-10-capsules-6.2-1671741393.jpg",
+            "var1": "Vitamin Tablets",
+            "var2": "Weight Loss Supplements",
+            "var3": "Dietary Supplements",
+            "var4": "Minerals Supplements"
+        },
+        {
+            "type": "PCD Pharma Franchise",
+            "image": "http://www.eridanushealth.com/wp-content/uploads/2017/08/Pharma-Franchise-e1506071645529.jpg",
+            "var1": "Pharma Franchise",
+            "var2": "Allopathic PCD Franchise",
+            "var3": "Ayurvedic PCD Franchise",
+            "var4": "Veterinary PCD Franchise"
+        }
+    ],
+    "mechinaryAndequipments": [
+        {
+            "type": "Snack Machine",
+            "image": "https://5.imimg.com/data5/SELLER/Default/2022/11/FX/ZO/XW/1744767/snacks-making-machine-1000x1000.jpg",
+            "var1": "Namkeen Making Mechines",
+            "var2": "Pani Puri Making Machines",
+            "var3": "Kurkure Extruder",
+            "var4": ""
+        },
+        {
+            "type": "Air Compressors",
+            "image": "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/71-usJrAMKL._SL1500_.jpg",
+            "var1": "Reciprocating Air Compressor",
+            "var2": "Inegersoll Rand Air Compressor",
+            "var3": "Oil Free Compressor",
+            "var4": ""
+        },
+        {
+            "type": "Water Purification Plants",
+            "image": "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/71iMtv7yQ6L._SL1500_.jpg",
+            "var1": "Water Treatment Plants",
+            "var2": "Industrial RO System",
+            "var3": "Water Ionizer Mechine",
+            "var4": ""
+        },
+        {
+            "type": "Garment Printing Machine",
+            "image": "https://5.imimg.com/data5/SELLER/Default/2020/9/UV/KX/PH/53576774/2dtg-printing-kaos-500x500.jpg",
+            "var1": "T Shirt Printer",
+            "var2": "Screen Printing Machines",
+            "var3": "Digital Garment Printing Machines",
+            "var4": ""
+        }
+    ],
+    "trendingCategories": [
+        {
+            "image": "https://5.imimg.com/data5/XH/YP/GLADMIN-2/jcb-machine-125x125.jpg",
+            "name": "JCB Machine",
+            "text": "Get Quotes"
+        },
+        {
+            "image": "https://3.imimg.com/data3/TD/NP/GLADMIN-123996/steel-almirah-125x125.jpg",
+            "name": "Steel Almirah",
+            "text": "Get Quotes"
+        },
+        {
+            "image": "https://3.imimg.com/data3/LY/VY/MY-2/floor-tiles-125x125.jpg",
+            "name": "Floor Tiles",
+            "text": "Get Quotes"
+        },
+        {
+            "image": "https://4.imimg.com/data4/BP/VY/GLADMIN-180396/rice-cutting-machine-125x125.jpg",
+            "name": "Rice Cutting Machine",
+            "text": "Get Quotes"
+        },
+        {
+            "image": "https://3.imimg.com/data3/KS/JQ/GLADMIN-2475/tmt-bars-125x125.jpg",
+            "name": "TMT Bars",
+            "text": "Get Quotes"
+        },
+        {
+            "image": "https://5.imimg.com/data5/SU/UA/GLADMIN-2/submersible-pump-125x125.jpg",
+            "name": "Submersible Pump",
+            "text": "Get Quotes"
+        },
+        {
+            "image": "https://3.imimg.com/data3/LC/XC/MY-2/footwear-machinery-125x125.jpg",
+            "name": "Footwear Machinery",
+            "text": "Get Quotes"
+        },
+        {
+            "image": "https://3.imimg.com/data3/VM/WL/GLADMIN-170652/pop-false-ceiling-125x125.jpg",
+            "name": "Pop False Ceiling",
+            "text": "Get Quotes"
+        }
+    ],
+    "premiumBrands": [
+        {
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/3M_wordmark.svg/2560px-3M_wordmark.svg.png"
+        },
+        {
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/3M_wordmark.svg/2560px-3M_wordmark.svg.png"
+        },
+        {
+            "image": "https://logos-world.net/wp-content/uploads/2020/08/Caterpillar-Logo.png"
+        },
+        {
+            "image": "https://1000logos.net/wp-content/uploads/2017/08/ExxonMobil-Logo.png"
+        },
+        {
+            "image": "https://cdn.sanity.io/images/92ui5egz/production/ba0e8bde098aa99fc24c647fe3cb85affb7243bd-1920x1080.jpg?rect=0,36,1920,1008&w=1200&h=630&fm=jpg"
+        },
+        {
+            "image": "https://img.oemoffhighway.com/files/base/acbm/ooh/image/2017/08/hyundaiconstructionequipmentnewlogo.59848ddfd0d3e.png?auto=format%2Ccompress&fit=max&q=70&w=1200"
+        },
+        {
+            "image": "https://zeevector.com/wp-content/uploads/Philips-Logo-PNG.png"
+        },
+        {
+            "image": "https://5.imimg.com/data5/PK/NG/HK/SELLER-55949831/tata-tiscon-tmt-bars-1000x1000.jpeg"
+        },
+        {
+            "image": "https://oxygendigitalshop.com/media/catalog/category/Haier_logo_logotype_wordmark.png"
+        },
+        {
+            "image": "https://findvectorlogo.com/wp-content/uploads/2022/03/weber-saint-gobain-vector-logo-2022.png"
+        },
+        {
+            "image": "https://www.henkel.com/resource/image/833780/16x9/1280/720/5bfe6cb76a2ae4cf9ed07eeccbc4638e/89D06DD9CDABAAEF0B337E3D8F2238DD/henkel-logo.webp"
+        },
+        {
+            "image": "https://download.logo.wine/logo/Schneider_Electric/Schneider_Electric-Logo.wine.png"
+        }
+    ]
+}
