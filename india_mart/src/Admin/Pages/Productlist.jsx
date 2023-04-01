@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
 import Productcard from '../Component/Productcard';
 import "../Css/Productlist.css"
+import Sidebar from '../Component/Sidebar';
 
 const Productlist = () => {
   const [productData, setProductData] = useState([]);
@@ -27,29 +28,35 @@ const Productlist = () => {
     fetchData();
   },[])
   return (
-    <div className='parent' style={{marginTop:"15px"}}>
-      <div className='options'>
-        <div>
-          <Link to="/adminAddProduct"><button className='add-product'>ADD PRODUCT</button></Link>
+    <div>
+      <Sidebar/>
+      <div className='parent' style={{marginTop:"15px"}}>
+        <div className='options'>
+          <div>
+            <Link to="/adminAddProduct"><button className='add-product'>ADD PRODUCT</button></Link>
+          </div>
+          {/* <div>
+            <select className='category'  placeholder='H'>
+              <option>SELECT CATEGORY</option>
+              <option>HELLO</option>
+            </select>
+          </div> */}
         </div>
-        <div>
-          <select className='category'  placeholder='H'>
-            <option>SELECT CATEGORY</option>
-            <option>HELLO</option>
-          </select>
+        <br/>
+        <br/>
+        <div className="products">
+          {
+            productData?.map((e)=>{
+              return(
+                <Productcard key={e.id} {...e} deleteData={deleteData}/>
+              )
+            })
+          }
         </div>
       </div>
       <br/>
       <br/>
-      <div className="products">
-        {
-          productData?.map((e)=>{
-            return(
-              <Productcard key={e.id} {...e} deleteData={deleteData}/>
-            )
-          })
-        }
-      </div>
+      <br/>
     </div>
   )
 }
