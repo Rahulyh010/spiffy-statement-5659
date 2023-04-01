@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from "../Css/Productcard.module.css"
+import { Link } from 'react-router-dom'
 
 const Productcard = (data) => {
   return (
@@ -18,7 +19,7 @@ const Productcard = (data) => {
         <hr/>
         <div>
           <div className={styles.update}>
-            <button>Update</button>
+            <Link to={`/adminUpdateProduct/${data.id}`}><button>Update</button></Link>
           </div>
           <div className={styles.delete}>
             <button onClick={()=>data.deleteData(data.id)}>Delete</button>

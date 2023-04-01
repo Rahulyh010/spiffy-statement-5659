@@ -224,5 +224,43 @@
             "name": "Pop False Ceiling",
             "text": "Get Quotes"
         }
+    ],
+    "premiumBrands": [
+        {
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/3M_wordmark.svg/2560px-3M_wordmark.svg.png"
+        },
+        {
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/3M_wordmark.svg/2560px-3M_wordmark.svg.png"
+        },
+        {
+            "image": "https://logos-world.net/wp-content/uploads/2020/08/Caterpillar-Logo.png"
+        },
+        {
+            "image": "https://1000logos.net/wp-content/uploads/2017/08/ExxonMobil-Logo.png"
+        },
+        {
+            "image": "https://cdn.sanity.io/images/92ui5egz/production/ba0e8bde098aa99fc24c647fe3cb85affb7243bd-1920x1080.jpg?rect=0,36,1920,1008&w=1200&h=630&fm=jpg"
+        },
+        {
+            "image": "https://img.oemoffhighway.com/files/base/acbm/ooh/image/2017/08/hyundaiconstructionequipmentnewlogo.59848ddfd0d3e.png?auto=format%2Ccompress&fit=max&q=70&w=1200"
+        },
+        {
+            "image": "https://zeevector.com/wp-content/uploads/Philips-Logo-PNG.png"
+        },
+        {
+            "image": "https://5.imimg.com/data5/PK/NG/HK/SELLER-55949831/tata-tiscon-tmt-bars-1000x1000.jpeg"
+        },
+        {
+            "image": "https://oxygendigitalshop.com/media/catalog/category/Haier_logo_logotype_wordmark.png"
+        },
+        {
+            "image": "https://findvectorlogo.com/wp-content/uploads/2022/03/weber-saint-gobain-vector-logo-2022.png"
+        },
+        {
+            "image": "https://www.henkel.com/resource/image/833780/16x9/1280/720/5bfe6cb76a2ae4cf9ed07eeccbc4638e/89D06DD9CDABAAEF0B337E3D8F2238DD/henkel-logo.webp"
+        },
+        {
+            "image": "https://download.logo.wine/logo/Schneider_Electric/Schneider_Electric-Logo.wine.png"
+        }
     ]
 }

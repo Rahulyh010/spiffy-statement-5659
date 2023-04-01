@@ -7,6 +7,11 @@
 }
 .main-nav-div {
   width: 100%;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 999;
 }
 .navbar {
   width: 100%;
@@ -56,6 +61,7 @@
   padding: 6px 10px;
   border: none;
   outline: none;
+  margin: auto;
 }
 
 .midpart input::-webkit-input-placeholder {
@@ -74,7 +80,6 @@
   width: 100%;
   z-index: 99;
   margin-top: -70px;
-  
 }
 
 .nav-items > li,
@@ -94,8 +99,6 @@
   z-index: 999;
   background: white;
   overflow: auto;
-  
-  
 }
 
 #top-part {
