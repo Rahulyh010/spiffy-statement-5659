@@ -8,6 +8,7 @@ import Updateproduct from "../Admin/Pages/Updateproduct";
 import Home from "../Pages/Home";
 import { ProductsPage } from "../Pages/ProductsPage";
 import { CartPage } from "../Pages/CartPage";
+import Login from "../Login_Signup/Pages/Login";
 
 
 const Allroutes = () => {
@@ -20,6 +21,8 @@ const Allroutes = () => {
     <Route path="/admin" element={<Productlist/>}/>
     <Route path="/adminAddProduct" element={<AddProduct/>}/>
     <Route path="/adminUpdateProduct/:id" element={<Updateproduct/>}/>
+    <Route path="/login" element={<Login/>}/>
+    <Route path="/register" element={<Signup/>}/>
   </Routes>
   </div>;
 };

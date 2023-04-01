@@ -1,52 +1,80 @@
-import { useRef } from "react";
-import { useSelector } from "react-redux";
+import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import styles from "../styles/Login.module.css"
+import styles from "../styles/Login.module.css";
 
-function Login() {
-  let auth = useSelector((store)=>store.AuthReducer.isAuth);
-  // console.log(auth);
+const Login = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
-  const email = useRef();
-  const password = useRef();
   const navigate = useNavigate();
 
-  const localEmail = localStorage.getItem("email");
-  const localPassword = localStorage.getItem("password");
-
-  const handleClick = () => {
-    if (
-      email.current.value === localEmail &&
-      password.current.value === localPassword
-    ) {
-      // console.log(name.current.value,email.current.value,password.current.value)
-      auth = !auth;
-      console.log(auth)
-      navigate("/");
-
-    } else {
-      alert("fill correct  details");
-    }
+  const handleSubmit = () => {
+    const payload = {
+      email: email,
+      password: password,
+    };
+    // console.log(payload);
+    fetch(`http://localhost:8080/users/login`, {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json",
+      },
+      body: JSON.stringify(payload),
+    })
+      .then((res) => res.json())
+      //   .then((res) => console.log(res))
+      .then((res) => {
+        console.log(res);
+        localStorage.setItem("token", res.token);
+        navigate("/");
+      })
+      .then((res)=>alert("User Login Successfully"))
+      .catch((err) => {
+        console.log(err);
+        alert("fill correct  details");
+      });
   };
 
   return (
-    <div className={styles.signup_box}>
+    <>
+      <div className={styles.signup_box}>
         <div className={styles.signup_main_container}>
-        <h1 className={styles.reg}>Login</h1>
-      <div className={styles.signup_container}>
-        <div className={styles.input_space}>
-          <input type="email" placeholder="email" ref={email} />
-        </div>
-        <div className={styles.input_space}>
-          <input type="password" placeholder="password" ref={password} />
-        </div>
-        <button className={styles.praButton} onClick={handleClick}>Login</button>
-        <div className="login_link">
-            Not a member? <Link to="/signup">Sign Up</Link>
+          <h1 className={styles.reg}>Login</h1>
+          <div className={styles.signup_container}>
+            <div className={styles.input_space}>
+              <input
+                type="text"
+                name=""
+                id=""
+                placeholder="Enter email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+            </div>
+            <div className={styles.input_space}>
+              <input
+                type="password"
+                name=""
+                id=""
+                placeholder="Enter Password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+            </div>
+            <button className={styles.praButton} onClick={handleSubmit}>
+              Login
+            </button>
+
+            <div className="login_link">
+              <br />
+              Not a member ? 
+              <Link to="/signup">  Sign Up</Link>
+            </div>
+          </div>
         </div>
       </div>
-        </div>
-    </div>
+    </>
   );
-}
+};
+
 export default Login;
