@@ -1,12 +1,14 @@
 
 .signup_main_container{
     position: absolute;
-    top: 25%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 400px;
     background:white;
     border-radius: 5%;
+    padding: 2%;
+
 
 }
 .signup_main_container h1{

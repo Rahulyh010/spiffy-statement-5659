@@ -5,6 +5,7 @@
     align-items: center;
     justify-content: center;
     font-family: 'Inter', sans-serif;
+    margin-left: 80px;
 }
 .blurr{
     /* display: grid; */
@@ -49,4 +50,95 @@
     font-size: 17px;
     height:100px;
     resize: none;
+}
+.add{
+    padding: 6px 12px;
+    border: none;
+    border-radius: 2px;
+    font-weight: bolder;
+    font-size: 16px;
+    color: black;
+    background: rgb(6, 150, 6);
+}
+.add:hover{
+    cursor: pointer;
+}
+@media (min-width:1000px) and (max-width:1200px){
+    .table{
+        width: 60%;
+    }
+}
+@media (min-width:800px) and (max-width:1000px){
+    .table{
+        width: 70%;
+        gap:50px;
+    }
+}
+@media (min-width:700px) and (max-width:800px){
+    .table{
+        width: 75%;
+        gap:40px;
+    }
+}
+@media (min-width:500px) and (max-width:700px){
+    .table{
+        width: 85%;
+        gap:30px;
+    }
+}
+@media (min-width:400px) and (max-width:500px){
+    .table{
+        flex-direction: column-reverse;
+        gap:30px;
+        width: 90%;
+    }
+    .table div{
+        margin: auto;
+    }
+    .blurr>center>p{
+        font-size: 25px;
+        font-weight: 800;
+    }
+    .container {
+        height: auto;
+    }
+}
+@media (min-width:300px) and (max-width:400px){
+    .table{
+        flex-direction: column-reverse;
+        gap:30px;
+        width: 95%;
+    }
+    .table div{
+        margin: auto;
+    }
+    .blurr>center>p{
+        font-size: 25px;
+        font-weight: 800;
+    }
+    .container {
+        height: auto;
+    }
+}
+@media (max-width:300px){
+    .table{
+        flex-direction: column-reverse;
+        gap:30px;
+        width: 100%;
+    }
+    .table div{
+        margin: auto;
+    }
+    .blurr>center>p{
+        font-size: 20px;
+        font-weight: 800;
+    }
+    .container {
+        height: auto;
+    }
+}
+@media (max-width:500px){
+    .container{
+        margin: 10px 0px 10px 53px;
+    }
 }

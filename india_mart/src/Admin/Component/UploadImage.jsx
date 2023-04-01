@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "../Css/UploadImage.module.css"
 
-export default function UploadImage({product}) {
+export default function UploadImage({product,img}) {
   const [image, setImage] = React.useState(null);
   const [error, setError] = React.useState(false);
   const refere = React.useRef(null);
@@ -44,7 +44,7 @@ const handleImage = async (e) => {
       <button onClick={handleClick}>Upload Product Image</button>
       <br />
       <br />
-      <img src={image || "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRp7FO0tGf6TCT3bMO_V97wHCxGmz3PihxTZM_ll6kUhObSG-anNOg3wNTAFH_s6KyJ1BQ&usqp=CAU"} 
+      <img src={image || img || "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRp7FO0tGf6TCT3bMO_V97wHCxGmz3PihxTZM_ll6kUhObSG-anNOg3wNTAFH_s6KyJ1BQ&usqp=CAU"} 
       alt="" 
       style={{border: error ? "2px solid red" : "2px solid black"}}
       />

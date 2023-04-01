@@ -3,8 +3,10 @@ import UploadImage from '../Component/UploadImage';
 import styles from '../Css/AddProduct.module.css'
 import axios from 'axios';
 import Sidebar from "../Component/Sidebar"
+import { useParams } from "react-router-dom";
 
-const AddProduct = () => {
+const Updateproduct = () => {
+    const {id} = useParams();
   const [productdata, setData] = React.useState({
     id:Date.now(),
     image: "",
@@ -24,19 +26,10 @@ const AddProduct = () => {
     if (e.target.type == "number") {
       a = +a;
     }
-
-    if (b == "reviews") {
-      let r = {
-        rate: a,
-        count: 0,
-      };
-      setData({ ...productdata, [b]: r });
-      return;
-    }
     setData({ ...productdata, [b]: a });
   };
 
-  const handleAdd = (event) =>{
+  const handleUpdate = async (event) =>{
     event.preventDefault()
     if (
       productdata.title &&
@@ -45,22 +38,34 @@ const AddProduct = () => {
       productdata.price
     ) {
       try {
-        axios({
-          method: `post`,
-          baseURL: `https://alok-verma-rct.onrender.com/beautyface`,
-          data: { ...productdata },
+        let res = await fetch(`https://alok-verma-rct.onrender.com/beautyface/${id}`, {
+          method: "PATCH",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(productdata),
         });
       } catch (err) {
         alert("Facing some issues please try again");
         return;
       }
-
-      alert("Product Added Successfully");
+      alert("Product Updated Successfully");
       window.location.reload();
     } else {
       alert("Fill the data properly");
     }
   }
+
+  const fetchSingleProduct = async (id) => {
+    await axios
+        .get(`https://alok-verma-rct.onrender.com/beautyface/${id}`)
+        .then((res)=>setData(res.data))
+        .catch((err)=>console.log(err));
+    }
+
+    React.useEffect(()=>{
+        fetchSingleProduct(id)
+    },[]);
 
   return (
     <div>
@@ -84,7 +89,7 @@ const AddProduct = () => {
           </center>
           <div className={styles.table}>
             <div className={styles.form}>
-              <form onSubmit={handleAdd}>
+              <form onSubmit={handleUpdate}>
                 <label>Title</label><br/>
                 <input name="title" value={productdata.title} type="text" onChange={onInputChange}/><br/>
                 <label>Price</label><br/>
@@ -92,14 +97,14 @@ const AddProduct = () => {
                 <label>Discount</label><br/>
                 <input name="discount" value={productdata.discount} type="number" onChange={onInputChange}/><br/>
                 <label>Reviews</label><br/>
-                <input name="reviews" value={productdata.reviews.rate} type="text" onChange={onInputChange}/><br/>
+                <input disabled name="reviews" value={productdata.reviews.rate} type="text" onChange={onInputChange}/><br/>
                 <label>Product Description</label><br/>
                 <textarea name="description" value={productdata.description} type="text" onChange={onInputChange}/><br/><br/>
-                <input type="submit" className={styles.add} value={"Add Product"}/>
+                <input type="submit" className={styles.add} value={"Update Product"}/>
               </form>
             </div>
             <div>
-              <UploadImage product={productdata}/>
+              <UploadImage product={productdata} img={productdata?.image}/>
             </div>
           </div>
         </div>
@@ -108,4 +113,4 @@ const AddProduct = () => {
   )
 }
 
-export default AddProduct
+export default Updateproduct
