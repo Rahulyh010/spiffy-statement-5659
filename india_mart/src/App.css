@@ -1,3 +1,8 @@
-button:hover{
-cursor: pointer;
+button:hover {
+  cursor: pointer;
+}
+.fa-cart-shopping,
+.fa-user {
+  color: white;
+  font-size: 20px;
 }

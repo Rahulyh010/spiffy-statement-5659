@@ -163,6 +163,10 @@
     display: none;
   }
 
+  .navbar > a > .icons {
+    display: none;
+  }
+
   #ham-icon {
     display: block;
   }
