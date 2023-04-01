@@ -54,19 +54,20 @@ cartRoute.patch("/update/:id",Auth, async(req,res)=>{
 
 })
 
-cartRoute.delete("/delete/:id",Auth,async(req,res)=>{
+cartRoute.delete("/delete/:id",async(req,res)=>{
 
     const {id}=req.params;
 
     if(id){
-
+       const data= await CartModel.findByIdAndDelete({_id:id})
+       res.status(200).send({"msg":"Successfully deleted"})
     }else{
-        
+        res.status(400).send({"msg":"Pass Id"})
     }
 
-    const data= await CartModel.find({_id:id})
+    //const data= await CartModel.find({_id:id})
 
-    res.status(200).send({"msg":"Successfully deleted"})
+   
 })
 
 

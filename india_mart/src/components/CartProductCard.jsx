@@ -1,7 +1,8 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import "../Styles/cartcard.css"
+import axios from 'axios';
 
-export const CartProductCard = ({title,image,reviews,description,discount,price}) => {
+export const CartProductCard = ({_id,title,image,reviews,description,discount,price}) => {
 
  
 
@@ -14,6 +15,7 @@ export const CartProductCard = ({title,image,reviews,description,discount,price}
   
     const [display,setDisplay]=useState(false)
     const [display1,setDisplay1]=useState(false)
+    const [render,setRender]=useState(false)
    
   
   const style={
@@ -37,6 +39,23 @@ export const CartProductCard = ({title,image,reviews,description,discount,price}
        setDisplay1(!display1)
   }
   
+  const handleDelete=(_id)=>{
+    setRender(!render)
+    axios.delete(`http://localhost:8080/cart/delete/${_id}`)
+    .then((res)=>{
+      console.log(res)
+      
+     
+    })
+    .catch((err)=>{
+      console.log(err)
+    })
+  }
+
+  useEffect(()=>{
+console.log(render)
+  },[render])
+
   return (
     <div className='product-card'>
          <img width="100%" src={image} alt="" />
@@ -45,7 +64,7 @@ export const CartProductCard = ({title,image,reviews,description,discount,price}
          <p>Rating <span><i class="fa fa-star" aria-hidden="true"></i></span>:{reviews.rate}</p>
          <p>Description:<span id="points" onClick={handlemoreText1} > ...Know More</span><span style={style1}>{description}</span> </p>
          <button id="p-btn1"> <span><i class="icons fas fa-cart-shopping"></i> </span> Added To Cart</button>
-         <button id="p-btn2" >Buy <span><i class="fa fa-external-link-square" aria-hidden="true"></i></span></button>
+         <button id="p-btn2" onClick={()=>handleDelete(_id)} >Remove <span><i class="fa fa-external-link-square" aria-hidden="true"></i></span></button>
     </div>
   )
 }

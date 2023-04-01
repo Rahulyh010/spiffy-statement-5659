@@ -47,7 +47,7 @@ setLoading(false)
     
 
   return loading ? <CartLoading/> : (
-    <div>
+    <div id="cart-main1" >
       <Navbar/>
 
 <div id="know-cart">

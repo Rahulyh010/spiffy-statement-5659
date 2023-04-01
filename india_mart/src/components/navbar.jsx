@@ -38,18 +38,20 @@ const Navbar = () => {
         <i className="icons fas fa-tag"></i>
         <i className="icons fa fa-store"></i>
         <i className="icons fa fa-circle-question"></i>
-        <i className="icons fas fa-cart-shopping"></i>
-        <i className="icons fa-solid fa-user"></i>
+        <Link to="/cart"> <i className="icons fas fa-cart-shopping"></i></Link>
+       <Link to="/login"> <i className="icons fa-solid fa-user"></i></Link>
+       
         <span className="min-screen">
           <i className="icons fa fa-search"></i>
-          <i className="icons fas fa-cart-shopping"></i>
-          <i className="icons fa-solid fa-user"></i>
+          <Link to="/cart"><i className="icons fas fa-cart-shopping"></i></Link>
+          <Link to="/login"><i className="icons fa-solid fa-user"></i></Link>
+          
         </span>
       </div>
       {/* Second Part */}
       <div className="nav-items">
-        <Link to="/" />
-        <Link to="food" className="nav-item-links">
+        
+        <Link to="/food" className="nav-item-links">
           Food & Beverages
         </Link>
         <li className="nav-item-links">Apparel & Garments</li>
@@ -73,7 +75,8 @@ const Navbar = () => {
           <p style={{ fontWeight: "500", margin: "5px 0" }}>BUY</p>
         </div>
         <div className="ham-items">
-          <li className="nav-item-links">Food & Beverages</li>
+          <Link to="/food"><li className="nav-item-links">Food & Beverages</li></Link>
+          
           <li className="nav-item-links">Apparel & Garments</li>
           <li className="nav-item-links">Hospital & Diagnostics</li>
           <li className="nav-item-links">Industrial Plants & Machinery</li>
