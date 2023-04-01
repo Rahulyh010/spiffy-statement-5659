@@ -5,12 +5,14 @@ const cartSchema=mongoose.Schema({
     title:String,
     price:String,
     reviews:Object,
-    image_url:String,
+    image:String,
     discount:Number,
-    discription:String,
+    description:String,
     rating:String,
     price:Number,
-    
+    userId:String,
+    count:Number
+
 
 }
 )
