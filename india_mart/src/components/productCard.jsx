@@ -48,9 +48,9 @@ function handleAddToCart(){
     }
 
 
-    axios.post(`http://localhost:8080/cart/add`, initial,{
+    axios.post(`https://cooperative-bass-toga.cyclic.app/cart/add`, initial,{
       headers:{
-        Authorization:"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDI2YjdiMzBmZjY2MTE4MDM3MDg4Y2UiLCJpYXQiOjE2ODAyNTkwMDl9.FsT4LsCZ1LoULmQ3jzHocKLS09B-2m8HVOJXGhk9ZhE"
+        Authorization:`${localStorage.getItem("token")}`
       }
     })
     .then((res)=>{
