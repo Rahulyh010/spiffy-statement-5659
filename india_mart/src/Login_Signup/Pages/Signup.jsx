@@ -18,7 +18,7 @@ const Signup = () => {
       city: city,
     };
     // console.log(payload);
-    fetch(`http://localhost:8080/users/register`, {
+    fetch(`https://cooperative-bass-toga.cyclic.app/users/register`, {
       method: "POST",
       headers: {
         "Content-type": "application/json",

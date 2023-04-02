@@ -38,7 +38,7 @@ const Updateproduct = () => {
       productdata.price
     ) {
       try {
-        let res = await fetch(`http://localhost:8080/admin/editproduct/${id}`, {
+        let res = await fetch(`https://cooperative-bass-toga.cyclic.app/admin/editproduct/${id}`, {
           method: "PATCH",
           headers: {
             "Content-Type": "application/json",
@@ -59,7 +59,7 @@ const Updateproduct = () => {
 
   const fetchSingleProduct = async (id) => {
     await axios
-        .get(`http://localhost:8080/admin/${id}`,{
+        .get(`https://cooperative-bass-toga.cyclic.app/admin/${id}`,{
           headers:{
             Authorization:`${localStorage.getItem("adminID")}`
           }

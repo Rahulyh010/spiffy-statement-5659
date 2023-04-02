@@ -13,13 +13,14 @@ export const CartPage = () => {
 const [loading,setLoading]=useState(true)
 
 const getData=()=>{
-  axios.get(`http://localhost:8080/cart`,{
+  axios.get(`https://cooperative-bass-toga.cyclic.app/cart`,{
     headers:{
-      Authorization:localStorage.getItem("token")
+      Authorization:`${localStorage.getItem("token")}`
     }
   })
   .then((res)=>{
     console.log(res)
+    console.log(localStorage.getItem("token"))
     setData(res.data)
     let n=0
   res.data.map((e)=>{

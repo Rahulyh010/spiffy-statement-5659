@@ -9,7 +9,7 @@ const AdminLogin = () => {
 
   const handleClick =() => {
     console.log(text)
-    axios.get(`http://localhost:8080/admin`,{
+    axios.get(`https://cooperative-bass-toga.cyclic.app/admin`,{
       headers:{
         Authorization:`${text}`
       }
