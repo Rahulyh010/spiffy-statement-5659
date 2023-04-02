@@ -7,7 +7,7 @@ const TrendClass = ({ data }) => {
       {data &&
         data.map((el, i) => {
           return (
-            <Center>
+            <Center key={i + 1 * 8}>
               <div key={i + 1} className="trend-class">
                 <img src={el.image} alt={el.name} />
                 <p>{el.name}</p>

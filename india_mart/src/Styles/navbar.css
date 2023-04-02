@@ -47,13 +47,18 @@
 .midpart {
   /* border: 1px solid red; */
   width: 40%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   background: white;
   padding: 3px 15px;
   border-radius: 20px;
   cursor: pointer;
+  text-decoration: none;
+}
+
+.midpart a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
 }
 
 .midpart input {
@@ -135,8 +140,10 @@
   padding: 1rem;
 }
 
-.ham-items > li {
+.ham-items > li,
+.ham-items > a {
   cursor: pointer;
+  text-decoration: none;
 }
 
 .fa-xmark {
@@ -156,6 +163,10 @@
     display: none;
   }
 
+  .navbar > a > .icons {
+    display: none;
+  }
+
   #ham-icon {
     display: block;
   }
@@ -168,6 +179,10 @@
     width: 30%;
     display: flex;
     justify-content: space-between;
+  }
+
+  .min-screen .fa-search {
+    color: white;
   }
 
   .nav-items {

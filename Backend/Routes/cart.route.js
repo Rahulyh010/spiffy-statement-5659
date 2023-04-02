@@ -1,7 +1,7 @@
 
 
 const express= require("express");
-const { Auth } = require("../MiddleWares/Auth.middleware");
+const { Auth, PostAuth } = require("../MiddleWares/Auth.middleware");
 const { CartModel } = require("../Models/cart.model");
 const jwt=require("jsonwebtoken")
 
@@ -31,7 +31,7 @@ cartRoute.post("/add",Auth,async(req,res)=>{
 
     const data= CartModel(req.body)
     await data.save();
-    res.status(400).send({"msg":"Succefully added to cart"})
+    res.status(200).send({"msg":"Succefully added to cart"})
 
 
 
@@ -54,19 +54,20 @@ cartRoute.patch("/update/:id",Auth, async(req,res)=>{
 
 })
 
-cartRoute.delete("/delete/:id",Auth,async(req,res)=>{
+cartRoute.delete("/delete/:id",async(req,res)=>{
 
     const {id}=req.params;
 
     if(id){
-
+       const data= await CartModel.findByIdAndDelete({_id:id})
+       res.status(200).send({"msg":"Successfully deleted"})
     }else{
-        
+        res.status(400).send({"msg":"Pass Id"})
     }
 
-    const data= await CartModel.find({_id:id})
+    //const data= await CartModel.find({_id:id})
 
-    res.status(200).send({"msg":"Successfully deleted"})
+   
 })
 
 
