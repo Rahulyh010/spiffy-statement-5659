@@ -5,7 +5,7 @@ import {
     FaShoppingBag,
     FaTh, FaThList, FaUserAlt,
 }from "react-icons/fa";
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import styles from "../Css/sidebar.module.css";
 import logo from "../../Assets/DigiMARTlogo1.png";
 
@@ -33,7 +33,7 @@ const Sidebar = ({children}) => {
     <div className={styles.container}>
         <div style={{width: isOpen ? "230px" : "50px"}} className={styles.sidebar}>
             <div className={styles.top_section}>
-                <img src={logo} style={{display: isOpen ? "block" : "none", width:"50%"}} className={styles.logo}/>
+                <Link to={"/"}><img src={logo} style={{display: isOpen ? "block" : "none", width:"100%"}} className={styles.logo}/></Link>
                 <div style={{marginLeft: isOpen ? "75px" : "0px"}} className={styles.bars}>
                     <FaBars onClick={toggle}/>
                 </div>
