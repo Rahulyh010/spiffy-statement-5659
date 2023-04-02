@@ -1,12 +1,12 @@
 import { Route, Routes } from "react-router-dom";
-import Search from "../pages/search";
+import Search from "../Pages/search";
 import Productlist from "../Admin/Pages/Productlist";
 import About from "../Admin/Pages/About";
 import AddProduct from "../Admin/Pages/AddProduct";
 import Updateproduct from "../Admin/Pages/Updateproduct";
-import Home from "../pages/Home";
-import { ProductsPage } from "../pages/ProductsPage";
-import { CartPage } from "../pages/CartPage";
+import Home from "../Pages/Home";
+import { ProductsPage } from "../Pages/ProductsPage";
+import { CartPage } from "../Pages/CartPage";
 import Login from "../Login_Signup/Pages/Login";
 import Signup from "../Login_Signup/Pages/Signup";
 import AdminLogin from "../Admin/Pages/AdminLogin";
