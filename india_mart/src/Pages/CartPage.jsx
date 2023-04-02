@@ -4,6 +4,7 @@ import { CartProductCard } from '../components/CartProductCard';
 import "../Styles/cartpage.css"
 import { CartLoading } from './cartLoding';
 import Navbar from '../components/navbar';
+import { Link } from 'react-router-dom';
 
 export const CartPage = () => {
 
@@ -67,8 +68,8 @@ setLoading(false)
 
 
     </div>
-
-    <button id="cart-btn1"> <span><i class="icons fas fa-cart-shopping"></i> </span> Checkout</button>
+<Link to="/checkout"> <button id="cart-btn1"> <span><i class="icons fas fa-cart-shopping"></i> </span> Checkout</button></Link>
+   
     </div>
   )
 }
