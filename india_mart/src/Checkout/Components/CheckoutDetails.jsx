@@ -174,7 +174,7 @@ const CheckoutDetails = () => {
       <Accordion w={"full"} defaultIndex={[0]} allowToggle>
         <AccordionItem>
           <h2>
-            <AccordionButton _expanded={{ bg: "red.800", color: "white" }}>
+            <AccordionButton _expanded={{ bg: "teal", color: "white" }}>
               <Box as="span" flex="1" textAlign="left">
                 Your Details
               </Box>
@@ -236,7 +236,7 @@ const CheckoutDetails = () => {
       <Accordion w={"full"} defaultIndex={[0]} allowToggle>
         <AccordionItem>
           <h2>
-            <AccordionButton _expanded={{ bg: "red.800", color: "white" }}>
+            <AccordionButton _expanded={{ bg: "teal", color: "white" }}>
               <Box as="span" flex="1" textAlign="left">
                 Payment
               </Box>
