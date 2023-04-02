@@ -38,10 +38,11 @@ const Updateproduct = () => {
       productdata.price
     ) {
       try {
-        let res = await fetch(`https://alok-verma-rct.onrender.com/beautyface/${id}`, {
+        let res = await fetch(`http://localhost:8080/admin/editproduct/${id}`, {
           method: "PATCH",
           headers: {
             "Content-Type": "application/json",
+            "Authorization":`${localStorage.getItem("adminID")}`
           },
           body: JSON.stringify(productdata),
         });
@@ -58,7 +59,11 @@ const Updateproduct = () => {
 
   const fetchSingleProduct = async (id) => {
     await axios
-        .get(`https://alok-verma-rct.onrender.com/beautyface/${id}`)
+        .get(`http://localhost:8080/admin/${id}`,{
+          headers:{
+            Authorization:`${localStorage.getItem("adminID")}`
+          }
+        })
         .then((res)=>setData(res.data))
         .catch((err)=>console.log(err));
     }

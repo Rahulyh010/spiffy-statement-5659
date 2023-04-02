@@ -8,6 +8,7 @@
   }
   .App button {
     font-weight: bold;
+    font-size: 17px;
     background-color: antiquewhite;
     padding: 5px 10px;
     border-radius: 10px;

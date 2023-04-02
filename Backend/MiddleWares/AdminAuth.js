@@ -5,7 +5,6 @@
 const adminAuth=(req,res,next)=>{
 
     const adminId=req.headers.authorization;
-    console.log(adminId)
 
     if(adminId==="rahul1234" || adminId=="mehul1234" || adminId==="mustafa1234" || adminId=="deepak123"){
         next()
