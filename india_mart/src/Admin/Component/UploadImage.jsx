@@ -38,7 +38,7 @@ const handleImage = async (e) => {
 }
 
   return (
-    <div className={styles.App}>
+    <div className={styles.UploadImage}>
       <input ref={refere} type="file" onChange={handleImage} />
       <br />
       <button onClick={handleClick}>Upload Product Image</button>

@@ -137,11 +137,19 @@
         height: auto;
     }
 }
-@media (max-width:500px){
+@media (max-width:600px){
     .container{
         margin: 10px 0px 10px 53px;
     }
     .add{
         margin-bottom: 20px;
+    }
+    .form input{
+        font-size: 13px;
+        font-weight: 600;
+    }
+    .form textarea{
+        font-size: 13px;
+        font-weight: 600;
     }
 }
