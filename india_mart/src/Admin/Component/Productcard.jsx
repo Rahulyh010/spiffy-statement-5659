@@ -19,10 +19,10 @@ const Productcard = (data) => {
         <hr/>
         <div>
           <div className={styles.update}>
-            <Link to={`/adminUpdateProduct/${data.id}`}><button>Update</button></Link>
+            <Link to={`/adminUpdateProduct/${data._id}`}><button>Update</button></Link>
           </div>
           <div className={styles.delete}>
-            <button onClick={()=>data.deleteData(data.id)}>Delete</button>
+            <button onClick={()=>data.deleteData(data._id)}>Delete</button>
           </div>
         </div>
     </div>

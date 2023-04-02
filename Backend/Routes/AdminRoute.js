@@ -7,8 +7,15 @@ const adminRoute=express.Router()
 
 
 adminRoute.get("/",adminAuth, async(req,res)=>{
-
+    console.log(req)
     const data= await AdminModel.find()
+
+    res.status(200).send(data)
+})
+
+adminRoute.get("/:id",adminAuth, async(req,res)=>{
+    const {id} = req.params
+    const data= await AdminModel.findOne({_id:id})
 
     res.status(200).send(data)
 })

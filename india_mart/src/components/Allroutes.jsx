@@ -9,6 +9,7 @@ import { ProductsPage } from "../pages/ProductsPage";
 import { CartPage } from "../pages/CartPage";
 import Login from "../Login_Signup/Pages/Login";
 import Signup from "../Login_Signup/Pages/Signup";
+import AdminLogin from "../Admin/Pages/AdminLogin";
 
 const Allroutes = () => {
   return (
@@ -16,6 +17,7 @@ const Allroutes = () => {
       <Route path="/" element={<Home />} />
       <Route path="/food" element={<ProductsPage />} />
       <Route path="/cart" element={<CartPage />} />
+      <Route path="/adminLogin" element={<AdminLogin/>}/>
       <Route path="/adminAbout" element={<About />} />
       <Route path="/admin" element={<Productlist />} />
       <Route path="/adminAddProduct" element={<AddProduct />} />
@@ -28,3 +30,5 @@ const Allroutes = () => {
 };
 
 export default Allroutes;
+
+

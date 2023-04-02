@@ -45,10 +45,11 @@ const AddProduct = () => {
       productdata.price
     ) {
       try {
-        axios({
-          method: `post`,
-          baseURL: `https://alok-verma-rct.onrender.com/beautyface`,
-          data: { ...productdata },
+        axios
+        .post(`http://localhost:8080/admin/addProducts`,productdata,{
+          headers:{
+            "Authorization":`${localStorage.getItem("adminID")}`
+          }
         });
       } catch (err) {
         alert("Facing some issues please try again");
