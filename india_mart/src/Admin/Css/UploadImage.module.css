@@ -1,46 +1,47 @@
-.App {
+.UploadImage {
     font-family: sans-serif;
     text-align: center;
     width: fit-content;
   }
-  .App input {
+  .UploadImage input {
     display: none;
   }
-  .App button {
+  .UploadImage button {
     font-weight: bold;
     font-size: 17px;
     background-color: antiquewhite;
     padding: 5px 10px;
     border-radius: 10px;
   }
-  .App button:hover {
+  .UploadImage button:hover {
     cursor: pointer;
     transition: 0.2s;
   }
-  .App img {
+  .UploadImage img {
     width: 200px;
     height: 200px;
+    margin: auto;
   }
 @media (min-width:500px) and (max-width:700px){
-  .App img{
+  .UploadImage img{
     width: 150px;
     height: 150px;
   }
 }
 @media (min-width:400px) and (max-width:500px){
-  .App img{
+  .UploadImage img{
     width: 170px;
     height: 170px;
   }
 }
 @media (min-width:300px) and (max-width:400px){
-  .App img{
+  .UploadImage img{
     width: 170px;
     height: 170px;
   }
 }
 @media (max-width:300px){
-  .App img{
+  .UploadImage img{
     width: 70%;
     height: 70%;
   }
