@@ -14,7 +14,7 @@ const Login = () => {
       password: password,
     };
     // console.log(payload);
-    fetch(`http://localhost:8080/users/login`, {
+    fetch(`https://cooperative-bass-toga.cyclic.app/users/login`, {
       method: "POST",
       headers: {
         "Content-type": "application/json",
@@ -26,6 +26,7 @@ const Login = () => {
       .then((res) => {
         console.log(res);
         localStorage.setItem("token", res.token);
+        console.log(localStorage.getItem("token"));
         navigate("/");
       })
       .then((res)=>alert("User Login Successfully"))

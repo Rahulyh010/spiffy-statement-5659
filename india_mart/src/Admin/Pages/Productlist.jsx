@@ -8,7 +8,7 @@ const Productlist = () => {
   const [productData, setProductData] = useState([]);
 
   const fetchData = async () => {
-    await fetch(`http://localhost:8080/admin`,{
+    await fetch(`https://cooperative-bass-toga.cyclic.app/admin`,{
       headers:{
         "Authorization":`${localStorage.getItem("adminID")}`
       }
@@ -19,7 +19,7 @@ const Productlist = () => {
   }
 
   const deleteData = async(id) => {
-    await fetch(`http://localhost:8080/admin/deletProduct/${id}`,{
+    await fetch(`https://cooperative-bass-toga.cyclic.app/admin/deletProduct/${id}`,{
       method:"DELETE",
       headers: {
         "Content-Type": "application/json",

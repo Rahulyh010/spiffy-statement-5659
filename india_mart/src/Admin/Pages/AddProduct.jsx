@@ -46,7 +46,7 @@ const AddProduct = () => {
     ) {
       try {
         axios
-        .post(`http://localhost:8080/admin/addProducts`,productdata,{
+        .post(`https://cooperative-bass-toga.cyclic.app/admin/addProduct`,productdata,{
           headers:{
             "Authorization":`${localStorage.getItem("adminID")}`
           }

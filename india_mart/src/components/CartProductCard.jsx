@@ -41,7 +41,7 @@ export const CartProductCard = ({_id,title,image,reviews,description,discount,pr
   
   const handleDelete=(_id)=>{
     setRender(!render)
-    axios.delete(`http://localhost:8080/cart/delete/${_id}`)
+    axios.delete(`https://cooperative-bass-toga.cyclic.app/cart/delete/${_id}`)
     .then((res)=>{
       console.log(res)
       

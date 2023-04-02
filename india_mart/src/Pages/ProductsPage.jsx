@@ -10,7 +10,7 @@ import "../Styles/productpage.css";
 
   const getdata = () => {
     axios
-      .get("http://localhost:8080/admin", {
+      .get("https://cooperative-bass-toga.cyclic.app/admin", {
         headers: {
           Authorization: "rahul1234",
         },
