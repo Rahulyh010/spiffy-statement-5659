@@ -31,7 +31,6 @@ import {
   AccordionIcon,
 } from "@chakra-ui/react";
 
-
 const CheckoutDetails = () => {
   const toast = useToast();
 
@@ -48,7 +47,7 @@ const CheckoutDetails = () => {
     if (name && address && city) {
       return (
         <Button
-          colorScheme="red"
+          colorScheme="teal"
           mt={4}
           onClick={() => {
             if (!toast.isActive(id)) {
@@ -70,7 +69,7 @@ const CheckoutDetails = () => {
     } else {
       return (
         <Button
-          colorScheme="red"
+          colorScheme="teal"
           mt={4}
           onClick={() => {
             if (!toast.isActive(id)) {
@@ -97,7 +96,7 @@ const CheckoutDetails = () => {
     if (cardNumber && cvv && expiry) {
       return (
         <Button
-          colorScheme="red"
+          colorScheme="teal"
           mt={4}
           onClick={() => {
             if (!toast.isActive(id)) {
@@ -111,7 +110,6 @@ const CheckoutDetails = () => {
                 isClosable: true,
                 position: "top",
               });
-              
             }
           }}
         >
@@ -121,7 +119,7 @@ const CheckoutDetails = () => {
     } else {
       return (
         <Button
-          colorScheme="red"
+          colorScheme="teal"
           onClick={() => {
             if (!toast.isActive(id)) {
               toast({
@@ -147,7 +145,7 @@ const CheckoutDetails = () => {
     return (
       <Button
         mt={3}
-        colorScheme="red"
+        colorScheme="teal"
         onClick={() => {
           if (!toast.isActive(id)) {
             toast({
@@ -170,155 +168,155 @@ const CheckoutDetails = () => {
 
   return (
     <>
-    <Stack m={"auto"} w={"full"} p={5} spacing={3} align="flex-start">
-      <Accordion w={"full"} defaultIndex={[0]} allowToggle>
-        <AccordionItem>
-          <h2>
-            <AccordionButton _expanded={{ bg: "red.800", color: "white" }}>
-              <Box as="span" flex="1" textAlign="left">
-                Your Details
-              </Box>
-              <AccordionIcon />
-            </AccordionButton>
-          </h2>
-          <AccordionPanel pb={4}>
-            <VStack w="full" h="full" p={2} spacing={10} align="flex-start">
-              <SimpleGrid columns={2} columnGap={3} rowGap={4}>
-                <GridItem colSpan={2}>
-                  <FormControl>
-                    <FormLabel>Name</FormLabel>
-                    <Input
-                      placeholder="Enter Name"
-                      value={name}
-                      onChange={(e) => setName(e.target.value)}
-                    />
-                  </FormControl>
-                </GridItem>
+      <Stack m={"auto"} w={"full"} p={5} spacing={3} align="flex-start">
+        <Accordion w={"full"} defaultIndex={[0]} allowToggle>
+          <AccordionItem>
+            <h2>
+              <AccordionButton _expanded={{ bg: "red.800", color: "white" }}>
+                <Box as="span" flex="1" textAlign="left">
+                  Your Details
+                </Box>
+                <AccordionIcon />
+              </AccordionButton>
+            </h2>
+            <AccordionPanel pb={4}>
+              <VStack w="full" h="full" p={2} spacing={10} align="flex-start">
+                <SimpleGrid columns={2} columnGap={3} rowGap={4}>
+                  <GridItem colSpan={2}>
+                    <FormControl>
+                      <FormLabel>Name</FormLabel>
+                      <Input
+                        placeholder="Enter Name"
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
+                      />
+                    </FormControl>
+                  </GridItem>
 
-                <GridItem colSpan={2}>
-                  <FormControl>
-                    <FormLabel>Address</FormLabel>
-                    <Textarea
-                      placeholder="Enter Your Address"
-                      value={address}
-                      onChange={(e) => setAddress(e.target.value)}
-                    />
-                  </FormControl>
-                </GridItem>
-                <GridItem colSpan={1}>
-                  <FormControl>
-                    <FormLabel>City</FormLabel>
-                    <Input
-                      placeholder="Enter City"
-                      value={city}
-                      onChange={(e) => setCity(e.target.value)}
-                    />
-                  </FormControl>
-                </GridItem>
-                <GridItem colSpan={1}>
-                  <FormControl>
-                    <FormLabel>Country </FormLabel>
-                    <Select placeholder="India"></Select>
-                  </FormControl>
-                </GridItem>
+                  <GridItem colSpan={2}>
+                    <FormControl>
+                      <FormLabel>Address</FormLabel>
+                      <Textarea
+                        placeholder="Enter Your Address"
+                        value={address}
+                        onChange={(e) => setAddress(e.target.value)}
+                      />
+                    </FormControl>
+                  </GridItem>
+                  <GridItem colSpan={1}>
+                    <FormControl>
+                      <FormLabel>City</FormLabel>
+                      <Input
+                        placeholder="Enter City"
+                        value={city}
+                        onChange={(e) => setCity(e.target.value)}
+                      />
+                    </FormControl>
+                  </GridItem>
+                  <GridItem colSpan={1}>
+                    <FormControl>
+                      <FormLabel>Country </FormLabel>
+                      <Select placeholder="India"></Select>
+                    </FormControl>
+                  </GridItem>
 
-                <GridItem colSpan={2}>
-                  <DetailsSubmitButton />
-                </GridItem>
-              </SimpleGrid>
-            </VStack>
-          </AccordionPanel>
-        </AccordionItem>
-      </Accordion>
-    </Stack>
+                  <GridItem colSpan={2}>
+                    <DetailsSubmitButton />
+                  </GridItem>
+                </SimpleGrid>
+              </VStack>
+            </AccordionPanel>
+          </AccordionItem>
+        </Accordion>
+      </Stack>
 
-    <Stack m={"auto"} w={"full"} p={5} spacing={3} align="flex-start">
-      <Accordion w={"full"} defaultIndex={[0]} allowToggle>
-        <AccordionItem>
-          <h2>
-            <AccordionButton _expanded={{ bg: "red.800", color: "white" }}>
-              <Box as="span" flex="1" textAlign="left">
-                Payment
-              </Box>
-              <AccordionIcon />
-            </AccordionButton>
-          </h2>
-          <AccordionPanel pb={4}>
-            <Stack>
-              <Tabs variant="enclosed-colored" colorScheme="teal" isFitted>
-                <TabList>
-                  <Tab _selected={{ color: "white", bg: "blue.700" }}>
-                    Cash on Delivery
-                  </Tab>
+      <Stack m={"auto"} w={"full"} p={5} spacing={3} align="flex-start">
+        <Accordion w={"full"} defaultIndex={[0]} allowToggle>
+          <AccordionItem>
+            <h2>
+              <AccordionButton _expanded={{ bg: "red.800", color: "white" }}>
+                <Box as="span" flex="1" textAlign="left">
+                  Payment
+                </Box>
+                <AccordionIcon />
+              </AccordionButton>
+            </h2>
+            <AccordionPanel pb={4}>
+              <Stack>
+                <Tabs variant="enclosed-colored" colorScheme="teal" isFitted>
+                  <TabList>
+                    <Tab _selected={{ color: "white", bg: "blue.700" }}>
+                      Cash on Delivery
+                    </Tab>
 
-                  <Tab _selected={{ color: "white", bg: "blue.700" }}>
-                    Card Payment
-                  </Tab>
-                </TabList>
+                    <Tab _selected={{ color: "white", bg: "blue.700" }}>
+                      Card Payment
+                    </Tab>
+                  </TabList>
 
-                <TabPanels>
-                  <TabPanel>
-                    <Text>Deliver to above address !</Text>
-                    <CashOnDeliveryPaymentSubmitButton />
-                  </TabPanel>
-                  <TabPanel>
-                    <Text m={1} p={2}>
-                      Card Number
-                    </Text>
+                  <TabPanels>
+                    <TabPanel>
+                      <Text>Deliver to above address !</Text>
+                      <CashOnDeliveryPaymentSubmitButton />
+                    </TabPanel>
+                    <TabPanel>
+                      <Text m={1} p={2}>
+                        Card Number
+                      </Text>
 
-                    <Input
-                      id="ccn"
-                      type="password"
-                      inputmode="numeric"
-                      pattern="[0-9]{16}"
-                      autocomplete="cc-number"
-                      maxlength="16"
-                      placeholder="xxxx xxxx xxxx xxxx"
-                      onChange={(e) => setCardNumber(e.target.value)}
-                    />
+                      <Input
+                        id="ccn"
+                        type="password"
+                        inputmode="numeric"
+                        pattern="[0-9]{16}"
+                        autocomplete="cc-number"
+                        maxlength="16"
+                        placeholder="xxxx xxxx xxxx xxxx"
+                        onChange={(e) => setCardNumber(e.target.value)}
+                      />
 
-                    <HStack>
-                      <Box>
-                        <Text m={1} p={2}>
-                          CVV
-                        </Text>
-                        <Input
-                          type="password"
-                          inputmode="numeric"
-                          pattern="[0-9]{3}"
-                          maxLength={3}
-                          placeholder={"Enter 3 digits CVV"}
-                          onChange={(e) => setCVV(e.target.value)}
-                          mb={3}
-                        />
-                      </Box>
+                      <HStack>
+                        <Box>
+                          <Text m={1} p={2}>
+                            CVV
+                          </Text>
+                          <Input
+                            type="password"
+                            inputmode="numeric"
+                            pattern="[0-9]{3}"
+                            maxLength={3}
+                            placeholder={"Enter 3 digits CVV"}
+                            onChange={(e) => setCVV(e.target.value)}
+                            mb={3}
+                          />
+                        </Box>
 
-                      <Box>
-                        <Text m={1} p={2}>
-                          Expiry (MMDD)
-                        </Text>
-                        <Input
-                          type="password"
-                          inputmode="numeric"
-                          pattern="[0-9]{3}"
-                          maxLength={4}
-                          placeholder={"Enter 4 digits expiry"}
-                          onChange={(e) => setExpiry(e.target.value)}
-                          mb={3}
-                        />
-                      </Box>
-                    </HStack>
+                        <Box>
+                          <Text m={1} p={2}>
+                            Expiry (MMDD)
+                          </Text>
+                          <Input
+                            type="password"
+                            inputmode="numeric"
+                            pattern="[0-9]{3}"
+                            maxLength={4}
+                            placeholder={"Enter 4 digits expiry"}
+                            onChange={(e) => setExpiry(e.target.value)}
+                            mb={3}
+                          />
+                        </Box>
+                      </HStack>
 
-                    <PaymentSubmitButton mt={3} />
-                  </TabPanel>
-                </TabPanels>
-              </Tabs>
-            </Stack>
-          </AccordionPanel>
-        </AccordionItem>
-      </Accordion>
-    </Stack>
-  </>
+                      <PaymentSubmitButton mt={3} />
+                    </TabPanel>
+                  </TabPanels>
+                </Tabs>
+              </Stack>
+            </AccordionPanel>
+          </AccordionItem>
+        </Accordion>
+      </Stack>
+    </>
   );
 };
 
