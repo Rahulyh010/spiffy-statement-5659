@@ -1,8 +1,10 @@
 #cart-main1{
     margin-top: 150px;
+
 }
 .cart-main{
     width:80%;
+    margin: auto;
     height:auto;
     display: grid;
     grid-template-columns: repeat(4,1fr);
