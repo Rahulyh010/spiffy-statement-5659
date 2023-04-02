@@ -14,7 +14,7 @@ const [loading,setLoading]=useState(true)
 const getData=()=>{
   axios.get(`http://localhost:8080/cart`,{
     headers:{
-      Authorization:"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDI2YjdiMzBmZjY2MTE4MDM3MDg4Y2UiLCJpYXQiOjE2ODAyNTkwMDl9.FsT4LsCZ1LoULmQ3jzHocKLS09B-2m8HVOJXGhk9ZhE"
+      Authorization:localStorage.getItem("token")
     }
   })
   .then((res)=>{
@@ -30,7 +30,7 @@ const getData=()=>{
 setLoading(false)
   })
   .catch((err)=>{
-    console.log(err)
+    console.log(err.response.data.err)
     setLoading(true)
   })
 }
@@ -46,7 +46,8 @@ setLoading(false)
   },[total])
     
 
-  return loading ? <CartLoading/> : (
+  return loading ? <div> <div style={{display:"flex",alignItems:"center",backgroundColor:"orange"}} ><img src="https://w7.pngwing.com/pngs/821/338/png-transparent-warning-sign-computer-icons-warning-icon-angle-triangle-warning-sign-thumbnail.png" alt="" width="5%" />
+   <h1>You have Not signedUp ,If you already have a account please login</h1></div>  <CartLoading/></div>  : (
     <div id="cart-main1" >
       <Navbar/>
 
