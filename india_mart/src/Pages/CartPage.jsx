@@ -68,7 +68,7 @@ setLoading(false)
 
     </div>
 
-
+    <button id="cart-btn1"> <span><i class="icons fas fa-cart-shopping"></i> </span> Checkout</button>
     </div>
   )
 }
