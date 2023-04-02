@@ -48,7 +48,7 @@ const CheckoutDetails = () => {
     if (name && address && city) {
       return (
         <Button
-          colorScheme="red"
+          colorScheme="teal"
           mt={4}
           onClick={() => {
             if (!toast.isActive(id)) {
@@ -70,7 +70,7 @@ const CheckoutDetails = () => {
     } else {
       return (
         <Button
-          colorScheme="red"
+          colorScheme="teal"
           mt={4}
           onClick={() => {
             if (!toast.isActive(id)) {
@@ -97,7 +97,7 @@ const CheckoutDetails = () => {
     if (cardNumber && cvv && expiry) {
       return (
         <Button
-          colorScheme="red"
+          colorScheme="teal"
           mt={4}
           onClick={() => {
             if (!toast.isActive(id)) {
@@ -121,7 +121,7 @@ const CheckoutDetails = () => {
     } else {
       return (
         <Button
-          colorScheme="red"
+          colorScheme="teal"
           onClick={() => {
             if (!toast.isActive(id)) {
               toast({
@@ -147,7 +147,7 @@ const CheckoutDetails = () => {
     return (
       <Button
         mt={3}
-        colorScheme="red"
+        colorScheme="teal"
         onClick={() => {
           if (!toast.isActive(id)) {
             toast({
