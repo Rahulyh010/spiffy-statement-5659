@@ -24,10 +24,10 @@ const AdminLogin = () => {
     })
   }
   return (
-    <div className={styles.App}>
-        <div className={styles.form}>
-            <input value={text} onChange={(e)=>setText(e.target.value)}/><br/><br/>
-            <center><button onClick={handleClick}>Admin</button></center>
+    <div className={styles.adminlogin}>
+        <div className={styles.adminloginform}>
+            <input className={styles.adminidinput} value={text} onChange={(e)=>setText(e.target.value)}/><br/><br/>
+            <center><button className={styles.adminidinputButton} onClick={handleClick}>Admin</button></center>
         </div>
     </div>
   )

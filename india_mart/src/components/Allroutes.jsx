@@ -1,11 +1,8 @@
 import { Route, Routes } from "react-router-dom";
-
 import Productlist from "../Admin/Pages/Productlist";
 import About from "../Admin/Pages/About";
 import AddProduct from "../Admin/Pages/AddProduct";
 import Updateproduct from "../Admin/Pages/Updateproduct";
-
-
 
 import Login from "../Login_Signup/Pages/Login";
 import Signup from "../Login_Signup/Pages/Signup";
