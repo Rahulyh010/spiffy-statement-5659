@@ -8,10 +8,10 @@ import Login from "../Login_Signup/Pages/Login";
 import Signup from "../Login_Signup/Pages/Signup";
 import AdminLogin from "../Admin/Pages/AdminLogin";
 
-import { ProductsPage } from "../pages/ProductsPage";
-import Home from "../pages/Home";
-import { CartPage } from "../pages/CartPage";
-import Search from "../pages/search";
+import { ProductsPage } from "../Pages/ProductsPage";
+import Home from "../Pages/Home";
+import { CartPage } from "../Pages/CartPage";
+import Search from "../Pages/search";
 import Checkout from "../Checkout/Page/Checkout";
 const Allroutes = () => {
   return (
