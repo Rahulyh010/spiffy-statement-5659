@@ -41,7 +41,8 @@ HTML, CSS , JS, React, Chakra UI, Mongoose, MongoAltas, Express.js
 
 
 ## 3. Product
-![product](https://user-images.githubusercontent.com/107460051/229421794-bff4e6e2-2f4c-4ccc-aa8a-822943aa2476.jpeg)
+![product1](https://user-images.githubusercontent.com/107460051/229428132-e3576923-f268-4e31-a758-917590a2a181.jpeg)
+
 
 
 ## 4. Admin
