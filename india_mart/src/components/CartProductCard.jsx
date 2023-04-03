@@ -45,6 +45,7 @@ export const CartProductCard = ({_id,title,image,reviews,description,discount,pr
     .then((res)=>{
       console.log(res)
       
+      
      
     })
     .catch((err)=>{

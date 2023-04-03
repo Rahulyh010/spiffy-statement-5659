@@ -32,13 +32,14 @@
 #p-btn1:hover{
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
-#p-btn2{
+.product-card>#p-btn2{
     background-color: red;
     color: aliceblue;
-    margin-left: 60px;
+    margin-left: 30px;
 }
 #p-btn2:hover{
     box-shadow: rgba(225, 8, 8, 0.35) 0px 5px 15px;
+    
 }
 
 .product-card>p{

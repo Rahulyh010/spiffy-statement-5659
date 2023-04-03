@@ -63,7 +63,7 @@ setLoading(false)
 
 {
   data.map((e)=>{
-    return (<CartProductCard key={e._id} {...e}/>)
+    return (<CartProductCard key={e._id} {...e}  />)
   })
 }
 
