@@ -8,18 +8,18 @@ import Login from "../Login_Signup/Pages/Login";
 import Signup from "../Login_Signup/Pages/Signup";
 import AdminLogin from "../Admin/Pages/AdminLogin";
 
-import { ProductsPage } from "../Pages/ProductsPage";
-import Home from "../Pages/Home";
-import {CartPage} from "../Pages/CartPage"
-import Search from "../Pages/search";
+import { ProductsPage } from "../pages/ProductsPage";
+import Home from "../pages/Home";
+import { CartPage } from "../pages/CartPage";
+import Search from "../pages/search";
 import Checkout from "../Checkout/Page/Checkout";
 const Allroutes = () => {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/food" element={<ProductsPage />} />
-      <Route path="/cart" element={<CartPage/>} />
-      <Route path="/adminLogin" element={<AdminLogin/>}/>
+      <Route path="/cart" element={<CartPage />} />
+      <Route path="/adminLogin" element={<AdminLogin />} />
       <Route path="/adminAbout" element={<About />} />
       <Route path="/admin" element={<Productlist />} />
       <Route path="/adminAddProduct" element={<AddProduct />} />
@@ -27,11 +27,9 @@ const Allroutes = () => {
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
       <Route path="/search" element={<Search />} />
-      <Route path="/checkout" element={<Checkout/>}/>
+      <Route path="/checkout" element={<Checkout />} />
     </Routes>
   );
 };
 
 export default Allroutes;
-
-
