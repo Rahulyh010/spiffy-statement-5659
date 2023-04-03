@@ -7,11 +7,17 @@ import { Box } from "@chakra-ui/react";
 
 const Navbar = () => {
   const [display, setDisplay] = useState("none");
+  const [linkdisplay, setLinkDisplay] = useState("none");
   const hamRef = useRef(null);
+  const loginRef = useRef(null);
   const navigate = useNavigate();
 
   const toggleHam = () => {
     display === "none" ? setDisplay("block") : setDisplay("none");
+  };
+
+  const toggleLinks = () => {
+    linkdisplay === "block" ? setLinkDisplay("none") : setLinkDisplay("block");
   };
 
   const redirectToHome = () => {
@@ -43,9 +49,13 @@ const Navbar = () => {
         <Link to="/cart">
           <i className="icons fas fa-cart-shopping"></i>
         </Link>
-        <Link to="/login">
-          <i className="icons fa-solid fa-user"></i>
-        </Link>
+
+        <i className="icons fa-solid fa-user" onClick={toggleLinks}></i>
+        <div id="links-logins" ref={loginRef} style={{ display: linkdisplay }}>
+          <Link to="/login">User Login &#62;</Link>
+          <br />
+          <Link to="/adminLogin">Admin Login &#62;</Link>
+        </div>
 
         <span className="min-screen">
           <Link to="/search">
